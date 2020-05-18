@@ -23,7 +23,12 @@ namespace TI_xdt99_IDE
             "<libpath>", "<lstfile>", "<srcfile>", "<prjname>", "<tisrcfile>",
             "<tiobjfile>", "<tilstfile>", "<tiimgfile>", "<prjdisk>", "<objfile>",
             "<imgfile>", "<runfile>", "<tirunfile>", "<tiprjname>", "<ticart>",
-            "<basfile>"
+            "<basfile>", "<emu_machine>", "<emu_cart>", "<emu_gromport>", "<emu_joyport>",
+            "<emu_cass1>", "<emu_cass2>", "<emu_disk1>", "<emu_disk2>", "<emu_disk3>",
+            "<emu_disk4>", "<emu_hard1>", "<emu_hard2>", "<emu_hard3>", "<emu_rompath>",
+            "<emu_ioport>", "<emu_peb2>", "<emu_peb3>", "<emu_peb4>", "<emu_peb5>",
+            "<emu_peb6>", "<emu_peb7>", "<emu_peb8>", "<emu_fdc1>", "<emu_fdc2>",
+            "<emu_fdc3>", "<emu_fdc4>", "<emu_hdc1>", "<emu_hdc2>", "<emu_hdc3>"
         };
 
         private static readonly string[] basload1 =
@@ -59,7 +64,7 @@ namespace TI_xdt99_IDE
             "2070 D$ = \"\"",
             "2080 IF ABS( I ) = 5 THEN 2100",
             "2090 D$ = STR$( K )",
-            "2100 D$ = D$ & SEG$( X$, 1, 3 - LEN( D$ ))",
+            "2100 D$ = SEG$( X$, 1, 3 - LEN( D$ )) & D$",
             "2110 C$ = C$ & D$",
             "2120 D$ = \" \"",
             "2130 IF I > 0 THEN 2150",
@@ -113,6 +118,8 @@ namespace TI_xdt99_IDE
             string[] keyvalues = {};
             string s;
             int f;
+            string fdc;
+            string hdc;
 
             // Console.WriteLine("replacePatterns: '" + raw + "'");
 
@@ -125,10 +132,28 @@ namespace TI_xdt99_IDE
             string eel1 = txt_ExtEmu_List.Text; if (eel1.Length > 1) { eel1 = eel1.Substring(0, 1); }
             string eei1 = txt_ExtEmu_Image.Text; if (eei1.Length > 1) { eei1 = eei1.Substring(0, 1); }
 
+            fdc = "";
+            if ((cmb_Emu_Peb2.Text == "tifdc") | (cmb_Emu_Peb2.Text == "hfdc")) { fdc = " -ioport:peb:slot2:" + cmb_Emu_Peb2.Text; }
+            if ((cmb_Emu_Peb3.Text == "tifdc") | (cmb_Emu_Peb3.Text == "hfdc")) { fdc = " -ioport:peb:slot3:" + cmb_Emu_Peb3.Text; }
+            if ((cmb_Emu_Peb4.Text == "tifdc") | (cmb_Emu_Peb4.Text == "hfdc")) { fdc = " -ioport:peb:slot4:" + cmb_Emu_Peb4.Text; }
+            if ((cmb_Emu_Peb5.Text == "tifdc") | (cmb_Emu_Peb5.Text == "hfdc")) { fdc = " -ioport:peb:slot5:" + cmb_Emu_Peb5.Text; }
+            if ((cmb_Emu_Peb6.Text == "tifdc") | (cmb_Emu_Peb6.Text == "hfdc")) { fdc = " -ioport:peb:slot6:" + cmb_Emu_Peb6.Text; }
+            if ((cmb_Emu_Peb7.Text == "tifdc") | (cmb_Emu_Peb7.Text == "hfdc")) { fdc = " -ioport:peb:slot7:" + cmb_Emu_Peb7.Text; }
+            if ((cmb_Emu_Peb8.Text == "tifdc") | (cmb_Emu_Peb8.Text == "hfdc")) { fdc = " -ioport:peb:slot8:" + cmb_Emu_Peb8.Text; }
+            hdc = "";
+            if ((cmb_Emu_Peb2.Text == "hfdc") | (cmb_Emu_Peb2.Text == "ide")) { hdc = " -ioport:peb:slot2:" + cmb_Emu_Peb2.Text; }
+            if ((cmb_Emu_Peb3.Text == "hfdc") | (cmb_Emu_Peb3.Text == "ide")) { hdc = " -ioport:peb:slot3:" + cmb_Emu_Peb3.Text; }
+            if ((cmb_Emu_Peb4.Text == "hfdc") | (cmb_Emu_Peb4.Text == "ide")) { hdc = " -ioport:peb:slot4:" + cmb_Emu_Peb4.Text; }
+            if ((cmb_Emu_Peb5.Text == "hfdc") | (cmb_Emu_Peb5.Text == "ide")) { hdc = " -ioport:peb:slot5:" + cmb_Emu_Peb5.Text; }
+            if ((cmb_Emu_Peb6.Text == "hfdc") | (cmb_Emu_Peb6.Text == "ide")) { hdc = " -ioport:peb:slot6:" + cmb_Emu_Peb6.Text; }
+            if ((cmb_Emu_Peb7.Text == "hfdc") | (cmb_Emu_Peb7.Text == "ide")) { hdc = " -ioport:peb:slot7:" + cmb_Emu_Peb7.Text; }
+            if ((cmb_Emu_Peb8.Text == "hfdc") | (cmb_Emu_Peb8.Text == "ide")) { hdc = " -ioport:peb:slot8:" + cmb_Emu_Peb8.Text; }
+
             n = keywords.Length;
             Array.Resize(ref keyvalues, n);
             for (int i = 0; i < n; i++)
             {
+                s = "";
                 if (i == 0) //libpath
                 {
                     s = txt_Xdt_Base.Text + txt_Xdt_Library.Text;
@@ -208,6 +233,132 @@ namespace TI_xdt99_IDE
                 {
                     s = "load.b99";
                 }
+                else if (i == 16) //emu_machine
+                {
+                    if (cmb_Emu_Machine.Text != "-----") { s = " " + cmb_Emu_Machine.Text; }
+                }
+                else if (i == 17) //emu_cart
+                {
+                    if (cmb_Emu_Cartridge.Text != "-----") { s = " -cart " + cmb_Emu_Cartridge.Text; }
+                    // if (cmb_Emu_Cartridge.Text != "-----") { s = " -cart " + cmb_Emu_Cartridge.Text; } else { s = " -cart \"\""; }
+                }
+                else if (i == 18) //emu_gromport
+                {
+                    if (cmb_Emu_GromPort.Text != "-----") { s = " -gromport " + cmb_Emu_GromPort.Text; }
+                    // if (cmb_Emu_GromPort.Text != "-----") { s = " -gromport " + cmb_Emu_GromPort.Text; } else { s = " -gromport \"\""; }
+                }
+                else if (i == 19) //emu_joyport
+                {
+                    if (cmb_Emu_JoyPort.Text != "-----") { s = " -joyport " + cmb_Emu_JoyPort.Text; }
+                    // if (cmb_Emu_JoyPort.Text != "-----") { s = " -joyport " + cmb_Emu_JoyPort.Text; } else { s = " -joyport \"\""; }
+                }
+                else if (i == 20) //emu_cass1
+                {
+                    if (txt_Emu_CS1.Text != "") { s = " -cass1 " + txt_Emu_CS1.Text; }
+                    // if (txt_Emu_CS1.Text != "") { s = " -cass1 " + txt_Emu_CS1.Text; } else { s = " -cass1 \"\""; }
+                }
+                else if (i == 21) //emu_cass2
+                {
+                    if (txt_Emu_CS2.Text != "") { s = " -cass2 " + txt_Emu_CS2.Text; }
+                }
+                else if (i == 22) //emu_disk1
+                {
+                    if (txt_Emu_DSK1.Text != "") { s = " -flop1 " + txt_Emu_DiskPath.Text + txt_Emu_DSK1.Text; }
+                }
+                else if (i == 23) //emu_disk2
+                {
+                    if (txt_Emu_DSK2.Text != "") { s = " -flop2 " + txt_Emu_DiskPath.Text + txt_Emu_DSK2.Text; }
+                }
+                else if (i == 24) //emu_disk3
+                {
+                    if (txt_Emu_DSK3.Text != "") { s = " -flop3 " + txt_Emu_DiskPath.Text + txt_Emu_DSK3.Text; }
+                }
+                else if (i == 25) //emu_disk4
+                {
+                    if (txt_Emu_DSK4.Text != "") { s = " -flop4 " + txt_Emu_DiskPath.Text + txt_Emu_DSK4.Text; }
+                }
+                else if (i == 26) //emu_hard1
+                {
+                    if (txt_Emu_WDS1.Text != "") { s = " -hard1 " + txt_Emu_HardPath.Text + txt_Emu_WDS1.Text; }
+                }
+                else if (i == 27) //emu_hard2
+                {
+                    if (txt_Emu_WDS2.Text != "") { s = " -hard2 " + txt_Emu_HardPath.Text + txt_Emu_WDS2.Text; }
+                }
+                else if (i == 28) //emu_hard2
+                {
+                    if (txt_Emu_WDS3.Text != "") { s = " -hard3 " + txt_Emu_HardPath.Text + txt_Emu_WDS3.Text; }
+                }
+                else if (i == 29) //emu_rompath
+                {
+                    s = txt_Emu_RomPath.Text;
+                    if (txt_Emu_CartPath.Text != "" )
+                    {
+                        if ( s != "" ) { s = s + ";"; }
+                        s = s + txt_Emu_CartPath.Text;
+                    }
+                    if ( s != "" ) { s = " -rp " + s; }
+                }
+                else if (i == 30) //emu_ioport
+                {
+                    if (cmb_Emu_IoPort.Text != "-----") { s = " -ioport " + cmb_Emu_IoPort.Text; }
+                }
+                else if (i == 31) //emu_peb2
+                {
+                    if (cmb_Emu_Peb2.Text != "-----") { s = " -ioport:peb:slot2 " + cmb_Emu_Peb2.Text; }
+                }
+                else if (i == 32) //emu_peb3
+                {
+                    if (cmb_Emu_Peb3.Text != "-----") { s = " -ioport:peb:slot3 " + cmb_Emu_Peb3.Text; }
+                }
+                else if (i == 33) //emu_peb4
+                {
+                    if (cmb_Emu_Peb4.Text != "-----") { s = " -ioport:peb:slot4 " + cmb_Emu_Peb4.Text; }
+                }
+                else if (i == 34) //emu_peb5
+                {
+                    if (cmb_Emu_Peb5.Text != "-----") { s = " -ioport:peb:slot5 " + cmb_Emu_Peb5.Text; }
+                }
+                else if (i == 35) //emu_peb6
+                {
+                    if (cmb_Emu_Peb6.Text != "-----") { s = " -ioport:peb:slot6 " + cmb_Emu_Peb6.Text; }
+                }
+                else if (i == 36) //emu_peb7
+                {
+                    if (cmb_Emu_Peb7.Text != "-----") { s = " -ioport:peb:slot7 " + cmb_Emu_Peb7.Text; }
+                }
+                else if (i == 37) //emu_peb8
+                {
+                    if (cmb_Emu_Peb8.Text != "-----") { s = " -ioport:peb:slot8 " + cmb_Emu_Peb8.Text; }
+                }
+                else if (i == 38) //emu_fdc1
+                {
+                    if (cmb_Emu_Fdd1.Text != "-----") { s = fdc + ":f1 " + cmb_Emu_Fdd1.Text; }
+                }
+                else if (i == 39) //emu_fdc2
+                {
+                    if (cmb_Emu_Fdd2.Text != "-----") { s = fdc + ":f2 " + cmb_Emu_Fdd2.Text; }
+                }
+                else if (i == 40) //emu_fdc3
+                {
+                    if (cmb_Emu_Fdd3.Text != "-----") { s = fdc + ":f3 " + cmb_Emu_Fdd3.Text; }
+                }
+                else if (i == 41) //emu_fdc4
+                {
+                    if (cmb_Emu_Fdd4.Text != "-----") { s = fdc + ":f4 " + cmb_Emu_Fdd4.Text; }
+                }
+                else if (i == 42) //emu_hdc1
+                {
+                    if (cmb_Emu_Hdd1.Text != "-----") { s = hdc + ":h1 " + cmb_Emu_Hdd1.Text; }
+                }
+                else if (i == 43) //emu_hdc2
+                {
+                    if (cmb_Emu_Hdd2.Text != "-----") { s = hdc + ":h2 " + cmb_Emu_Hdd2.Text; }
+                }
+                else if (i == 44) //emu_hdc3
+                {
+                    if (cmb_Emu_Hdd3.Text != "-----") { s = hdc + ":h3 " + cmb_Emu_Hdd3.Text; }
+                }
                 else
                 {
                     // ...
@@ -254,46 +405,64 @@ namespace TI_xdt99_IDE
                 n = n - 1;
             }
             ext = bin.Substring(n+1);
-            if (ext=="exe")
+            if (ext == "bat")
             {
-                runmod = 30;
+                runmod = 2;
             }
             else if (ext=="py")
             {
                 runmod = 21;
             }
+            else if (ext == "exe")
+            {
+                runmod = 30;
+            }
             Console.WriteLine("  trying runmod: " + runmod.ToString());
 
             ProcessStartInfo psi = new ProcessStartInfo();
-            if (runmod == 10) // ok
+            if (runmod == 1)
+            {
+                psi.WorkingDirectory = wrk;
+                psi.FileName = cmd;
+                psi.Arguments = "/k " + bin + " " + opt;
+                // c:\win\cmd.exe   -   /k c:\prg\batch.bat e:\pyt\script.py opt1 opt2 ...
+            }
+            else if (runmod == 2)
+            {
+                psi.WorkingDirectory = wrk;
+                psi.FileName = cmd1;
+                psi.Arguments = "/c " + bin + " " + opt;
+                // cmd   -   /k c:\prg\batch.bat opt1 opt2 ...
+            }
+            else if (runmod == 10)
             {
                 psi.WorkingDirectory = wrk;
                 psi.FileName = cmd;
                 psi.Arguments = "/k " + pyt + " " + bin + " " + opt;
                 // c:\win\cmd.exe   -   /k c:\prg\python.exe e:\pyt\script.py opt1 opt2 ...
             }
-            else if (runmod == 11) // ok, but: "System.InvalidOperationException" in System.dll
+            else if (runmod == 11)
             {
                 psi.WorkingDirectory = wrk;
                 psi.FileName = cmd1;
                 psi.Arguments = "/k " + pyt1 + " " + bin + " " + opt;
                 // cmd   -   /k python e:\pyt\script.py opt1 opt2 ...
             }
-            else if (runmod == 20) // ok, but: "System.InvalidOperationException" in System.dll
+            else if (runmod == 20)
             {
                 psi.WorkingDirectory = wrk;
                 psi.FileName = pyt;
                 psi.Arguments = bin + " " + opt;
                 // c:\prg\python.exe   -   e:\pyt\script.py opt1 opt2 ...
             }
-            else if (runmod == 21) // ok, but: "System.InvalidOperationException" in System.dll
+            else if (runmod == 21)
             {
                 psi.WorkingDirectory = wrk;
                 psi.FileName = pyt1;
                 psi.Arguments = bin + " " + opt;
                 // python   -   e:\pyt\script.py opt1 opt2 ...
             }
-            else if (runmod == 30) // error: "System.ComponentModel.Win32Exception" in System.dll
+            else if (runmod == 30)
             {
                 psi.WorkingDirectory = wrk;
                 psi.FileName = bin;
@@ -308,7 +477,7 @@ namespace TI_xdt99_IDE
             psi.WindowStyle = ProcessWindowStyle.Normal;
             try
             {
-                Console.WriteLine("  psi Filename [" + psi.FileName + "], Arguments [" + psi.Arguments + "]");
+                Console.WriteLine("  psi workingdir [" + psi.WorkingDirectory + "], filename [" + psi.FileName + "], arguments [" + psi.Arguments + "]");
                 txt_Command_Stack.Text = txt_Command_Stack.Text + psi.FileName + " " + psi.Arguments + "\r\n";
                 using (Process run = Process.Start(psi))
                 {
@@ -330,9 +499,10 @@ namespace TI_xdt99_IDE
                     txt_Error_Output.Text = txt_Error_Output.Text + stderr + "\r\n";
                 }
             }
-            catch
+            catch (Exception e)
             {
                 // ...
+                Console.WriteLine(e.Message);
             }
 
             return Result;
@@ -417,6 +587,47 @@ namespace TI_xdt99_IDE
             return Result;
         }
 
+        private bool refreshEmuOptions()
+        {
+            bool Result;
+            string opt;
+            Result = false;
+
+            opt = "";
+            opt = "<emu_rompath>";
+            opt = opt + "<emu_machine>";
+            opt = opt + "<emu_joyport>";
+            opt = opt + "<emu_gromport>";
+            opt = opt + "<emu_cart>";
+            opt = opt + "<emu_ioport>";
+            opt = opt + "<emu_peb2>";
+            opt = opt + "<emu_peb3>";
+            opt = opt + "<emu_peb4>";
+            opt = opt + "<emu_peb5>";
+            opt = opt + "<emu_peb6>";
+            opt = opt + "<emu_peb7>";
+            opt = opt + "<emu_peb8>";
+            opt = opt + "<emu_fdc1>";
+            opt = opt + "<emu_fdc2>";
+            opt = opt + "<emu_fdc3>";
+            opt = opt + "<emu_fdc4>";
+            opt = opt + "<emu_hdc1>";
+            opt = opt + "<emu_hdc2>";
+            opt = opt + "<emu_hdc3>";
+            opt = opt + "<emu_cass1>";
+            opt = opt + "<emu_cass2>";
+            opt = opt + "<emu_disk1>";
+            opt = opt + "<emu_disk2>";
+            opt = opt + "<emu_disk3>";
+            opt = opt + "<emu_disk4>";
+            opt = opt + "<emu_hard1>";
+            opt = opt + "<emu_hard2>";
+            opt = opt + "<emu_hard3>";
+            txt_Emu_Options.Text = replacePatterns(opt);
+
+            return Result;
+        }
+
         // start external editor with source file according to lst_sourcefiles
         private bool startEditor()
         {
@@ -425,10 +636,16 @@ namespace TI_xdt99_IDE
             string bin;
             string opt;
             Result = false;
+
+            toolStripStatusLabel2.Text = "Editor"; Application.DoEvents();
+
             bin = replacePatterns(txt_Editor_Binary.Text);
             opt = replacePatterns(txt_Editor_Options.Text);
             wrk = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_Projects.Text + txt_Project.Text);
-            Result = runExternal(bin, opt, wrk,false);
+            Result = runExternal(bin, opt, wrk, false);
+
+            toolStripStatusLabel2.Text = "idle"; Application.DoEvents();
+
             return Result;
         }
 
@@ -446,6 +663,10 @@ namespace TI_xdt99_IDE
             List<string> src;
             string sav;
             Result = false;
+            int n;
+
+            toolStripStatusLabel2.Text = "Assembler";
+
             src = new List<string>();
             txt_Standard_Output.Text = "";
             txt_Error_Output.Text = "";
@@ -460,28 +681,52 @@ namespace TI_xdt99_IDE
             {
                 src.Add(txt_Source.Text);
             }
+            n = 0;
+            if (chk_Assembler_Object.Checked) { n = n + 1; }
+            if (chk_Assembler_Image.Checked) { n = n + 1; }
+            if (chk_Assembler_Rpk.Checked) { n = n + 1; }
+
+            toolStripProgressBar1.Minimum = 0;
+            toolStripProgressBar1.Maximum = src.Count * n;
+            toolStripProgressBar1.Value = 0;
+            toolStripStatusLabel1.Text = "assembling"; Application.DoEvents();
+            toolStripStatusLabel1.Visible = true;
+            toolStripProgressBar1.Visible = true;
+
             wrk = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_Projects.Text + txt_Project.Text);
             bin = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_Assembler.Text);
             sav = txt_Source.Text;
             foreach (string s in src)
             {
+
                 txt_Source.Text = s;
                 if (chk_Assembler_Object.Checked)
                 {
+                    toolStripStatusLabel1.Text = "object"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_AsOptions_Object.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
                 if (chk_Assembler_Image.Checked)
                 {
+                    toolStripStatusLabel1.Text = "image"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_AsOptions_Image.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
                 if (chk_Assembler_Rpk.Checked)
                 {
+                    toolStripStatusLabel1.Text = "rpk"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_AsOptions_Rpk.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
+
             }
+            toolStripStatusLabel1.Visible = false;
+            toolStripStatusLabel1.Text = "";
+            toolStripProgressBar1.Visible = false;
+
             txt_Source.Text = sav;
             if (txt_Standard_Output.Text != "")
             {
@@ -493,6 +738,9 @@ namespace TI_xdt99_IDE
                 MessageBox.Show("There were errors!");
                 tabControl1.SelectedTab = tab_StdErr;
             }
+
+            toolStripStatusLabel2.Text = "idle";
+
             return Result;
         }
 
@@ -512,7 +760,10 @@ namespace TI_xdt99_IDE
             string opt;
             List<string> src;
             string sav;
+            int m;
             Result = false;
+
+            toolStripStatusLabel2.Text = "DiskManager"; Application.DoEvents();
             src = new List<string>();
             txt_Standard_Output.Text = "";
             txt_Error_Output.Text = "";
@@ -527,9 +778,27 @@ namespace TI_xdt99_IDE
             {
                 src.Add(txt_Source.Text);
             }
+            m = 0;
+            if (chk_Copy_Source.Checked) { m = m + 1; }
+            if (chk_Copy_List.Checked) { m = m + 1; }
+            if (chk_Copy_Object.Checked) { m = m + 1; }
+            if (chk_Copy_Image.Checked) { m = m + 1; }
+            m = src.Count * m;
+            if (chk_Copy_Catalog.Checked) { m = m + 1; }
+
+            toolStripProgressBar1.Minimum = 0;
+            toolStripProgressBar1.Maximum = m;
+            toolStripProgressBar1.Value = 0;
+            toolStripStatusLabel1.Text = "copying"; Application.DoEvents();
+            toolStripStatusLabel1.Visible = true;
+            toolStripProgressBar1.Visible = true;
+
             wrk = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_Projects.Text + txt_Project.Text);
+            // wrk = replacePatterns(txt_Emu_Path.Text + txt_Emu_DiskPath.Text);
             bin = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_DiskManager.Text);
             opt = replacePatterns(txt_Xdt_DmCreate_Diskfile.Text);
+
+            toolStripStatusLabel1.Text = "disk file"; Application.DoEvents();
             Result = runExternal(bin, opt, wrk, true);
             sav = txt_Source.Text;
             foreach (string s in src)
@@ -537,28 +806,38 @@ namespace TI_xdt99_IDE
                 txt_Source.Text = s;
                 if (chk_Copy_Source.Checked)
                 {
+                    toolStripStatusLabel1.Text = "source"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_DmCopy_Source.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
                 if (chk_Copy_List.Checked)
                 {
+                    toolStripStatusLabel1.Text = "list"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_DmCopy_List.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
                 if (chk_Copy_Object.Checked)
                 {
+                    toolStripStatusLabel1.Text = "object"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_DmCopy_Object.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
                 if (chk_Copy_Image.Checked)
                 {
+                    toolStripStatusLabel1.Text = "image"; Application.DoEvents();
                     opt = replacePatterns(txt_Xdt_DmCopy_Image.Text);
                     Result = runExternal(bin, opt, wrk, true);
+                    toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1; Application.DoEvents();
                 }
             }
             txt_Source.Text = sav;
             if (chk_Copy_Catalog.Checked)
             {
+                // wrk = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_Projects.Text + txt_Project.Text);
+                toolStripStatusLabel1.Text = "autorun"; Application.DoEvents();
                 sav = txt_Xdt_Base.Text + txt_Xdt_Projects.Text + txt_Project.Text + "\\load.b99";
                 using (StreamWriter bas = new StreamWriter(sav))
                 {
@@ -577,12 +856,21 @@ namespace TI_xdt99_IDE
                 bin = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_BasConv.Text);
                 opt = replacePatterns(txt_Xdt_BasConv_Load.Text);
                 Result = runExternal(bin, opt, wrk, true);
+                // wrk = replacePatterns(txt_Emu_Path.Text + txt_Emu_DiskPath.Text);
                 bin = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_DiskManager.Text);
                 opt = replacePatterns(txt_Xdt_DmCopy_Run.Text);
                 Result = runExternal(bin, opt, wrk, true);
+                toolStripProgressBar1.Value = toolStripProgressBar1.Value + 1;
             }
             opt = replacePatterns(txt_Xdt_DmShow_Directory.Text);
             Result = runExternal(bin, opt, wrk, true);
+
+            Result = runExternal("cmd.exe", replacePatterns("/c copy <prjdisk> " + replacePatterns(txt_Emu_Path.Text + txt_Emu_DiskPath.Text + "<prjdisk>")), wrk, true);
+
+            toolStripStatusLabel1.Visible = false;
+            toolStripStatusLabel1.Text = "";
+            toolStripProgressBar1.Visible = false;
+
             if (txt_Standard_Output.Text != "")
             {
                 // MessageBox.Show("See results...");
@@ -593,6 +881,8 @@ namespace TI_xdt99_IDE
                 MessageBox.Show("There were errors!");
                 tabControl1.SelectedTab = tab_StdErr;
             }
+
+            toolStripStatusLabel2.Text = "idle";
             return Result;
         }
 
@@ -605,12 +895,38 @@ namespace TI_xdt99_IDE
             string bin;
             string opt;
             string wrk;
+            string s;
             Result = false;
 
-            bin = "E:\\TI99\\mame64.exe";
-            opt = replacePatterns("ti99_4ev -gromport single -cart <ticart> -ioport peb -ioport:peb:slot2 evpc -ioport:peb:slot8 hfdc -ioport:peb:slot8:hfdc:f1 525dd -ioport:peb:slot8:hfdc:f2 525dd -ioport:peb:slot8:hfdc:h1 generic -flop1 disk/<prjdisk> -flop2 disk/flopdsk2.dsk -hard1 hard/harddsk1.chd");
-            wrk = "E:\\TI99\\";
+            toolStripStatusLabel2.Text = "Emulator"; Application.DoEvents();
+
+            txt_Standard_Output.Text = "";
+            txt_Error_Output.Text = "";
+
+            s = cmb_Emu_Cartridge.Text;
+            if (opt_Emu_EditAss.Checked) { cmb_Emu_Cartridge.Text = "EditAss"; txt_Emu_DSK1.Text = replacePatterns("<prjdisk>"); }
+            if (opt_Emu_MiniMem.Checked) { cmb_Emu_Cartridge.Text = "MiniMem"; txt_Emu_DSK1.Text = replacePatterns("<prjdisk>"); }
+            if (opt_Emu_ExBasic.Checked) { cmb_Emu_Cartridge.Text = "ExBasic"; txt_Emu_DSK1.Text = replacePatterns("<prjdisk>"); }
+            refreshEmuOptions();
+            bin = txt_Emu_Binary.Text;
+            // opt = replacePatterns("ti99_4ev -gromport single -cart <ticart> -ioport peb -ioport:peb:slot2 evpc -ioport:peb:slot8 hfdc -ioport:peb:slot8:hfdc:f1 525dd -ioport:peb:slot8:hfdc:f2 525dd -ioport:peb:slot8:hfdc:h1 generic -flop1 disk/<prjdisk> -flop2 disk/flopdsk2.dsk -hard1 hard/harddsk1.chd");
+            opt = txt_Emu_Options.Text.Trim();
+            wrk = txt_Emu_Path.Text;
             runExternal(bin, opt, wrk, true);
+            s = cmb_Emu_Cartridge.Text;
+
+            if (txt_Standard_Output.Text != "")
+            {
+                // MessageBox.Show("See results...");
+                tabControl1.SelectedTab = tab_StdOut;
+            }
+            if (txt_Error_Output.Text != "")
+            {
+                MessageBox.Show("There were errors!");
+                tabControl1.SelectedTab = tab_StdErr;
+            }
+
+            toolStripStatusLabel2.Text = "idle"; Application.DoEvents();
 
             return Result;
         }
@@ -657,9 +973,11 @@ namespace TI_xdt99_IDE
                 MessageBox.Show("settings saved");
                 Result = true;
             }
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("error saving settings !");
+                MessageBox.Show("error saving xdt99 settings !");
+                Console.WriteLine(e.Message);
+                
             }
             return Result;
         }
@@ -669,7 +987,6 @@ namespace TI_xdt99_IDE
             bool Result;
             string s;
             Result = false;
-
             try
             {
                 s = Properties.Settings.Default["Editor_Binary"].ToString(); if (s != "")
@@ -738,11 +1055,11 @@ namespace TI_xdt99_IDE
                     { txt_Emu_Load.Text = s; }
                 Result = true;
             }
-            catch
+            catch (Exception e)
             {
-                MessageBox.Show("error loading settings !");
+                MessageBox.Show("error loading xdt99 settings !");
+                Console.WriteLine(e.Message);
             }
-
             return Result;
         }
 
@@ -750,15 +1067,138 @@ namespace TI_xdt99_IDE
         {
             bool Result;
             Result = false;
-
+            try
+            {
+                Properties.Settings.Default["Emu_Binary"] = txt_Emu_Binary.Text;
+                Properties.Settings.Default["Emu_Path"] = txt_Emu_Path.Text;
+                Properties.Settings.Default["Emu_RomPath"] = txt_Emu_RomPath.Text;
+                Properties.Settings.Default["Emu_CartPath"] = txt_Emu_CartPath.Text;
+                Properties.Settings.Default["Emu_DiskPath"] = txt_Emu_DiskPath.Text;
+                Properties.Settings.Default["Emu_HardPath"] = txt_Emu_HardPath.Text;
+                Properties.Settings.Default["Emu_Machine"] = cmb_Emu_Machine.Text;
+                Properties.Settings.Default["Emu_JoyPort"] = cmb_Emu_JoyPort.Text;
+                Properties.Settings.Default["Emu_GromPort"] = cmb_Emu_GromPort.Text;
+                Properties.Settings.Default["Emu_Cart"] = cmb_Emu_Cartridge.Text;
+                Properties.Settings.Default["Emu_IoPort"] = cmb_Emu_IoPort.Text;
+                Properties.Settings.Default["Emu_Peb2"] = cmb_Emu_Peb2.Text;
+                Properties.Settings.Default["Emu_Peb3"] = cmb_Emu_Peb3.Text;
+                Properties.Settings.Default["Emu_Peb4"] = cmb_Emu_Peb4.Text;
+                Properties.Settings.Default["Emu_Peb5"] = cmb_Emu_Peb5.Text;
+                Properties.Settings.Default["Emu_Peb6"] = cmb_Emu_Peb6.Text;
+                Properties.Settings.Default["Emu_Peb7"] = cmb_Emu_Peb7.Text;
+                Properties.Settings.Default["Emu_Peb8"] = cmb_Emu_Peb8.Text;
+                Properties.Settings.Default["Emu_FDD1"] = cmb_Emu_Fdd1.Text;
+                Properties.Settings.Default["Emu_FDD2"] = cmb_Emu_Fdd2.Text;
+                Properties.Settings.Default["Emu_FDD3"] = cmb_Emu_Fdd3.Text;
+                Properties.Settings.Default["Emu_FDD4"] = cmb_Emu_Fdd4.Text;
+                Properties.Settings.Default["Emu_HDD1"] = cmb_Emu_Hdd1.Text;
+                Properties.Settings.Default["Emu_HDD2"] = cmb_Emu_Hdd2.Text;
+                Properties.Settings.Default["Emu_HDD3"] = cmb_Emu_Hdd3.Text;
+                Properties.Settings.Default["Emu_CS1"] = txt_Emu_CS1.Text;
+                Properties.Settings.Default["Emu_CS2"] = txt_Emu_CS2.Text;
+                Properties.Settings.Default["Emu_DSK1"] = txt_Emu_DSK1.Text;
+                Properties.Settings.Default["Emu_DSK2"] = txt_Emu_DSK2.Text;
+                Properties.Settings.Default["Emu_DSK3"] = txt_Emu_DSK3.Text;
+                Properties.Settings.Default["Emu_DSK4"] = txt_Emu_DSK4.Text;
+                Properties.Settings.Default["Emu_WDS1"] = txt_Emu_WDS1.Text;
+                Properties.Settings.Default["Emu_WDS2"] = txt_Emu_WDS2.Text;
+                Properties.Settings.Default["Emu_WDS3"] = txt_Emu_WDS3.Text;
+                Properties.Settings.Default.Save();
+                MessageBox.Show("settings saved");
+                Result = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("error saving emulator settings !");
+                Console.WriteLine(e.Message);
+            }
             return Result;
         }
 
         private bool loadSettingsMame()
         {
             bool Result;
+            string s;
             Result = false;
-
+            try
+            {
+                // s = Properties.Settings.Default["Editor_Binary"].ToString(); if (s != "")
+                //     { txt_Editor_Binary.Text = s; }
+                s = Properties.Settings.Default["Emu_Binary"].ToString(); if (s != "")
+                { txt_Emu_Binary.Text = s; }
+                s = Properties.Settings.Default["Emu_Path"].ToString(); if (s != "")
+                { txt_Emu_Path.Text = s; }
+                s = Properties.Settings.Default["Emu_RomPath"].ToString(); if (s != "")
+                { txt_Emu_RomPath.Text = s; }
+                s = Properties.Settings.Default["Emu_CartPath"].ToString(); if (s != "")
+                { txt_Emu_CartPath.Text = s; }
+                s = Properties.Settings.Default["Emu_DiskPath"].ToString(); if (s != "")
+                { txt_Emu_DiskPath.Text = s; }
+                s = Properties.Settings.Default["Emu_HardPath"].ToString(); if (s != "")
+                { txt_Emu_HardPath.Text = s; }
+                s = Properties.Settings.Default["Emu_Machine"].ToString(); if (s != "")
+                { cmb_Emu_Machine.Text = s; }
+                s = Properties.Settings.Default["Emu_JoyPort"].ToString(); if (s != "")
+                { cmb_Emu_JoyPort.Text = s; }
+                s = Properties.Settings.Default["Emu_GromPort"].ToString(); if (s != "")
+                { cmb_Emu_GromPort.Text = s; }
+                s = Properties.Settings.Default["Emu_Cart"].ToString(); if (s != "")
+                { cmb_Emu_Cartridge.Text = s; }
+                s = Properties.Settings.Default["Emu_IoPort"].ToString(); if (s != "")
+                { cmb_Emu_IoPort.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb2"].ToString(); if (s != "")
+                { cmb_Emu_Peb2.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb3"].ToString(); if (s != "")
+                { cmb_Emu_Peb3.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb4"].ToString(); if (s != "")
+                { cmb_Emu_Peb4.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb5"].ToString(); if (s != "")
+                { cmb_Emu_Peb5.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb6"].ToString(); if (s != "")
+                { cmb_Emu_Peb6.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb7"].ToString(); if (s != "")
+                { cmb_Emu_Peb7.Text = s; }
+                s = Properties.Settings.Default["Emu_Peb8"].ToString(); if (s != "")
+                { cmb_Emu_Peb8.Text = s; }
+                s = Properties.Settings.Default["Emu_FDD1"].ToString(); if (s != "")
+                { cmb_Emu_Fdd1.Text = s; }
+                s = Properties.Settings.Default["Emu_FDD2"].ToString(); if (s != "")
+                { cmb_Emu_Fdd2.Text = s; }
+                s = Properties.Settings.Default["Emu_FDD3"].ToString(); if (s != "")
+                { cmb_Emu_Fdd3.Text = s; }
+                s = Properties.Settings.Default["Emu_FDD4"].ToString(); if (s != "")
+                { cmb_Emu_Fdd4.Text = s; }
+                s = Properties.Settings.Default["Emu_HDD1"].ToString(); if (s != "")
+                { cmb_Emu_Hdd1.Text = s; }
+                s = Properties.Settings.Default["Emu_HDD2"].ToString(); if (s != "")
+                { cmb_Emu_Hdd2.Text = s; }
+                s = Properties.Settings.Default["Emu_HDD3"].ToString(); if (s != "")
+                { cmb_Emu_Hdd3.Text = s; }
+                s = Properties.Settings.Default["Emu_CS1"].ToString(); if (s != "")
+                { txt_Emu_CS1.Text = s; }
+                s = Properties.Settings.Default["Emu_CS2"].ToString(); if (s != "")
+                { txt_Emu_CS2.Text = s; }
+                s = Properties.Settings.Default["Emu_DSK1"].ToString(); if (s != "")
+                { txt_Emu_DSK1.Text = s; }
+                s = Properties.Settings.Default["Emu_DSK2"].ToString(); if (s != "")
+                { txt_Emu_DSK2.Text = s; }
+                s = Properties.Settings.Default["Emu_DSK3"].ToString(); if (s != "")
+                { txt_Emu_DSK3.Text = s; }
+                s = Properties.Settings.Default["Emu_DSK4"].ToString(); if (s != "")
+                { txt_Emu_DSK4.Text = s; }
+                s = Properties.Settings.Default["Emu_WDS1"].ToString(); if (s != "")
+                { txt_Emu_WDS1.Text = s; }
+                s = Properties.Settings.Default["Emu_WDS2"].ToString(); if (s != "")
+                { txt_Emu_WDS2.Text = s; }
+                s = Properties.Settings.Default["Emu_WDS3"].ToString(); if (s != "")
+                { txt_Emu_WDS3.Text = s; }
+                Result = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("error loading emulator settings !");
+                Console.WriteLine(e.Message);
+            }
             return Result;
         }
 
@@ -815,6 +1255,11 @@ namespace TI_xdt99_IDE
         private void btn_Ok_Xdt_Click(object sender, EventArgs e)
         {
             saveSettingsXdt();
+        }
+
+        private void btn_Check_Mame_Click(object sender, EventArgs e)
+        {
+            startEmulator();
         }
 
         private void btn_Ok_Mame_Click(object sender, EventArgs e)
@@ -883,11 +1328,6 @@ namespace TI_xdt99_IDE
         // | other                                                              |
         // +--------------------------------------------------------------------+
 
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
-        {
-            refreshProjectList();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             loadSettingsXdt();
@@ -895,6 +1335,27 @@ namespace TI_xdt99_IDE
             loadSettingsIde();
         }
 
+        private void txt_Emu_TextChanged(object sender, EventArgs e)
+        {
+            refreshEmuOptions();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tab_IDE)
+            {
+                refreshProjectList();
+            }
+            if (tabControl1.SelectedTab == tab_Mame)
+            {
+                refreshEmuOptions();
+            }
+        }
+
+        private void opt_Emu_EditAss_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -482,168 +482,168 @@ namespace TI_xdt99_IDE.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_2 {
+        public string Emu_Peb2 {
             get {
-                return ((string)(this["Emu_Peb_2"]));
+                return ((string)(this["Emu_Peb2"]));
             }
             set {
-                this["Emu_Peb_2"] = value;
+                this["Emu_Peb2"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_3 {
+        public string Emu_Peb3 {
             get {
-                return ((string)(this["Emu_Peb_3"]));
+                return ((string)(this["Emu_Peb3"]));
             }
             set {
-                this["Emu_Peb_3"] = value;
+                this["Emu_Peb3"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_4 {
+        public string Emu_Peb4 {
             get {
-                return ((string)(this["Emu_Peb_4"]));
+                return ((string)(this["Emu_Peb4"]));
             }
             set {
-                this["Emu_Peb_4"] = value;
+                this["Emu_Peb4"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_5 {
+        public string Emu_Peb5 {
             get {
-                return ((string)(this["Emu_Peb_5"]));
+                return ((string)(this["Emu_Peb5"]));
             }
             set {
-                this["Emu_Peb_5"] = value;
+                this["Emu_Peb5"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_6 {
+        public string Emu_Peb6 {
             get {
-                return ((string)(this["Emu_Peb_6"]));
+                return ((string)(this["Emu_Peb6"]));
             }
             set {
-                this["Emu_Peb_6"] = value;
+                this["Emu_Peb6"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_7 {
+        public string Emu_Peb7 {
             get {
-                return ((string)(this["Emu_Peb_7"]));
+                return ((string)(this["Emu_Peb7"]));
             }
             set {
-                this["Emu_Peb_7"] = value;
+                this["Emu_Peb7"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_Peb_8 {
+        public string Emu_Peb8 {
             get {
-                return ((string)(this["Emu_Peb_8"]));
+                return ((string)(this["Emu_Peb8"]));
             }
             set {
-                this["Emu_Peb_8"] = value;
+                this["Emu_Peb8"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_FDD_1 {
+        public string Emu_FDD1 {
             get {
-                return ((string)(this["Emu_FDD_1"]));
+                return ((string)(this["Emu_FDD1"]));
             }
             set {
-                this["Emu_FDD_1"] = value;
+                this["Emu_FDD1"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_FDD_2 {
+        public string Emu_FDD2 {
             get {
-                return ((string)(this["Emu_FDD_2"]));
+                return ((string)(this["Emu_FDD2"]));
             }
             set {
-                this["Emu_FDD_2"] = value;
+                this["Emu_FDD2"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_FDD_3 {
+        public string Emu_FDD3 {
             get {
-                return ((string)(this["Emu_FDD_3"]));
+                return ((string)(this["Emu_FDD3"]));
             }
             set {
-                this["Emu_FDD_3"] = value;
+                this["Emu_FDD3"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_FDD_4 {
+        public string Emu_FDD4 {
             get {
-                return ((string)(this["Emu_FDD_4"]));
+                return ((string)(this["Emu_FDD4"]));
             }
             set {
-                this["Emu_FDD_4"] = value;
+                this["Emu_FDD4"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_HDD_1 {
+        public string Emu_HDD1 {
             get {
-                return ((string)(this["Emu_HDD_1"]));
+                return ((string)(this["Emu_HDD1"]));
             }
             set {
-                this["Emu_HDD_1"] = value;
+                this["Emu_HDD1"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_HDD_2 {
+        public string Emu_HDD2 {
             get {
-                return ((string)(this["Emu_HDD_2"]));
+                return ((string)(this["Emu_HDD2"]));
             }
             set {
-                this["Emu_HDD_2"] = value;
+                this["Emu_HDD2"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Emu_HDD_3 {
+        public string Emu_HDD3 {
             get {
-                return ((string)(this["Emu_HDD_3"]));
+                return ((string)(this["Emu_HDD3"]));
             }
             set {
-                this["Emu_HDD_3"] = value;
+                this["Emu_HDD3"] = value;
             }
         }
         
@@ -920,6 +920,90 @@ namespace TI_xdt99_IDE.Properties {
             }
             set {
                 this["IDE_chk_Emu_XB"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_Binary {
+            get {
+                return ((string)(this["Emu_Binary"]));
+            }
+            set {
+                this["Emu_Binary"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_Path {
+            get {
+                return ((string)(this["Emu_Path"]));
+            }
+            set {
+                this["Emu_Path"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_RomPath {
+            get {
+                return ((string)(this["Emu_RomPath"]));
+            }
+            set {
+                this["Emu_RomPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_CartPath {
+            get {
+                return ((string)(this["Emu_CartPath"]));
+            }
+            set {
+                this["Emu_CartPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_DiskPath {
+            get {
+                return ((string)(this["Emu_DiskPath"]));
+            }
+            set {
+                this["Emu_DiskPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_HardPath {
+            get {
+                return ((string)(this["Emu_HardPath"]));
+            }
+            set {
+                this["Emu_HardPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Emu_Cart {
+            get {
+                return ((string)(this["Emu_Cart"]));
+            }
+            set {
+                this["Emu_Cart"] = value;
             }
         }
     }

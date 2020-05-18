@@ -116,46 +116,46 @@
     <Setting Name="Emu_IoPort" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_2" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_3" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb3" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_4" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_5" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb5" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_6" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb6" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_7" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb7" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_Peb_8" Type="System.String" Scope="User">
+    <Setting Name="Emu_Peb8" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_FDD_1" Type="System.String" Scope="User">
+    <Setting Name="Emu_FDD1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_FDD_2" Type="System.String" Scope="User">
+    <Setting Name="Emu_FDD2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_FDD_3" Type="System.String" Scope="User">
+    <Setting Name="Emu_FDD3" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_FDD_4" Type="System.String" Scope="User">
+    <Setting Name="Emu_FDD4" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_HDD_1" Type="System.String" Scope="User">
+    <Setting Name="Emu_HDD1" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_HDD_2" Type="System.String" Scope="User">
+    <Setting Name="Emu_HDD2" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Emu_HDD_3" Type="System.String" Scope="User">
+    <Setting Name="Emu_HDD3" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Emu_DSK1" Type="System.String" Scope="User">
@@ -226,6 +226,27 @@
     </Setting>
     <Setting Name="IDE_chk_Emu_XB" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Emu_Binary" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Emu_Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Emu_RomPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Emu_CartPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Emu_DiskPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Emu_HardPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Emu_Cart" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tab_Settings = new System.Windows.Forms.TabPage();
+            this.tab_Xdt = new System.Windows.Forms.TabPage();
+            this.btn_Ok_Xdt = new System.Windows.Forms.Button();
             this.txt_ExtWin_Rpk = new System.Windows.Forms.TextBox();
             this.txt_ExtWin_BasB = new System.Windows.Forms.TextBox();
             this.txt_ExtWin_BasT = new System.Windows.Forms.TextBox();
             this.txt_Emu_Load = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.txt_Xdt_BasConv_Load = new System.Windows.Forms.TextBox();
             this.txt_Xdt_BasConv = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txt_Xdt_DmCopy_Run = new System.Windows.Forms.TextBox();
@@ -81,6 +83,69 @@
             this.txt_Editor_Binary = new System.Windows.Forms.TextBox();
             this.txt_Editor_Options = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tab_Mame = new System.Windows.Forms.TabPage();
+            this.cmb_Emu_Machine = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Cartridge = new System.Windows.Forms.ComboBox();
+            this.txt_Emu_Path = new System.Windows.Forms.TextBox();
+            this.txt_Emu_HardPath = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.txt_Emu_DiskPath = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.txt_Emu_CartPath = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txt_Emu_RomPath = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.cmb_Emu_Hdd3 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Hdd2 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Fdd4 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Fdd3 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Fdd2 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Peb8 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Peb7 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Peb6 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Peb5 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Peb4 = new System.Windows.Forms.ComboBox();
+            this.cmb_Emu_Peb3 = new System.Windows.Forms.ComboBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txt_Emu_Binary = new System.Windows.Forms.TextBox();
+            this.txt_Emu_Options = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.btn_Ok_Mame = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
+            this.txt_Emu_CS2 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_CS1 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.cmb_Emu_JoyPort = new System.Windows.Forms.ComboBox();
+            this.txt_Emu_WDS3 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_WDS2 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_WDS1 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_DSK4 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_DSK3 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_DSK2 = new System.Windows.Forms.TextBox();
+            this.txt_Emu_DSK1 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.cmb_Emu_Hdd1 = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cmb_Emu_Fdd1 = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cmb_Emu_Peb2 = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cmb_Emu_IoPort = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.cmb_Emu_GromPort = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.tab_IDE = new System.Windows.Forms.TabPage();
             this.txt_Source = new System.Windows.Forms.TextBox();
             this.txt_Project = new System.Windows.Forms.TextBox();
@@ -129,71 +194,26 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tab_Mame = new System.Windows.Forms.TabPage();
-            this.label28 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Machine = new System.Windows.Forms.ComboBox();
-            this.cmb_Emu_GromPort = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.cmb_Emu_IoPort = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_2 = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_3 = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_4 = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_5 = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_6 = new System.Windows.Forms.ComboBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_7 = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Peb_8 = new System.Windows.Forms.ComboBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Fdd1 = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Fdd2 = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Fdd3 = new System.Windows.Forms.ComboBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Fdd4 = new System.Windows.Forms.ComboBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Hdd1 = new System.Windows.Forms.ComboBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Hdd2 = new System.Windows.Forms.ComboBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.cmb_Emu_Hdd3 = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.txt_Emu_DSK1 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_DSK2 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_DSK3 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_DSK4 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_WDS1 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_WDS2 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_WDS3 = new System.Windows.Forms.TextBox();
-            this.cmb_Emu_JoyPort = new System.Windows.Forms.ComboBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.txt_Emu_CS1 = new System.Windows.Forms.TextBox();
-            this.txt_Emu_CS2 = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.btn_Ok_Xdt = new System.Windows.Forms.Button();
-            this.btn_Ok_Mame = new System.Windows.Forms.Button();
-            this.txt_Xdt_BasConv_Load = new System.Windows.Forms.TextBox();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btn_Check_Mame = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
-            this.tab_Settings.SuspendLayout();
+            this.tab_Xdt.SuspendLayout();
+            this.tab_Mame.SuspendLayout();
             this.tab_IDE.SuspendLayout();
             this.grp_Emu_Cart.SuspendLayout();
             this.tab_Command.SuspendLayout();
             this.tab_StdOut.SuspendLayout();
             this.tab_StdErr.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tab_Mame.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tab_Settings);
+            this.tabControl1.Controls.Add(this.tab_Xdt);
             this.tabControl1.Controls.Add(this.tab_Mame);
             this.tabControl1.Controls.Add(this.tab_IDE);
             this.tabControl1.Controls.Add(this.tab_Command);
@@ -205,70 +225,80 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1184, 612);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // tab_Settings
+            // tab_Xdt
             // 
-            this.tab_Settings.Controls.Add(this.btn_Ok_Xdt);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_Rpk);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_BasB);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_BasT);
-            this.tab_Settings.Controls.Add(this.txt_Emu_Load);
-            this.tab_Settings.Controls.Add(this.label27);
-            this.tab_Settings.Controls.Add(this.label26);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_BasConv_Load);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_BasConv);
-            this.tab_Settings.Controls.Add(this.label25);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmCopy_Run);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_Disk);
-            this.tab_Settings.Controls.Add(this.label24);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmShow_Directory);
-            this.tab_Settings.Controls.Add(this.label20);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_Projects);
-            this.tab_Settings.Controls.Add(this.txt_ExtEmu_Image);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_Image);
-            this.tab_Settings.Controls.Add(this.txt_ExtEmu_List);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_List);
-            this.tab_Settings.Controls.Add(this.txt_ExtEmu_Object);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_Object);
-            this.tab_Settings.Controls.Add(this.txt_ExtEmu_Source);
-            this.tab_Settings.Controls.Add(this.txt_ExtWin_Source);
-            this.tab_Settings.Controls.Add(this.label19);
-            this.tab_Settings.Controls.Add(this.label14);
-            this.tab_Settings.Controls.Add(this.label13);
-            this.tab_Settings.Controls.Add(this.label12);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_Library);
-            this.tab_Settings.Controls.Add(this.label11);
-            this.tab_Settings.Controls.Add(this.label10);
-            this.tab_Settings.Controls.Add(this.label9);
-            this.tab_Settings.Controls.Add(this.label8);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmCopy_Image);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmCopy_List);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmCopy_Object);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmCopy_Source);
-            this.tab_Settings.Controls.Add(this.label7);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DmCreate_Diskfile);
-            this.tab_Settings.Controls.Add(this.label6);
-            this.tab_Settings.Controls.Add(this.label5);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_AsOptions_Image);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_AsOptions_Rpk);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_DiskManager);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_AsOptions_Object);
-            this.tab_Settings.Controls.Add(this.label4);
-            this.tab_Settings.Controls.Add(this.label3);
-            this.tab_Settings.Controls.Add(this.label2);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_Base);
-            this.tab_Settings.Controls.Add(this.txt_Xdt_Assembler);
-            this.tab_Settings.Controls.Add(this.txt_Editor_Binary);
-            this.tab_Settings.Controls.Add(this.txt_Editor_Options);
-            this.tab_Settings.Controls.Add(this.label1);
-            this.tab_Settings.Location = new System.Drawing.Point(4, 29);
-            this.tab_Settings.Name = "tab_Settings";
-            this.tab_Settings.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Settings.Size = new System.Drawing.Size(1176, 579);
-            this.tab_Settings.TabIndex = 0;
-            this.tab_Settings.Text = "Settings";
-            this.tab_Settings.UseVisualStyleBackColor = true;
+            this.tab_Xdt.Controls.Add(this.btn_Ok_Xdt);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_Rpk);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_BasB);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_BasT);
+            this.tab_Xdt.Controls.Add(this.txt_Emu_Load);
+            this.tab_Xdt.Controls.Add(this.label27);
+            this.tab_Xdt.Controls.Add(this.label26);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_BasConv_Load);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_BasConv);
+            this.tab_Xdt.Controls.Add(this.label25);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmCopy_Run);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_Disk);
+            this.tab_Xdt.Controls.Add(this.label24);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmShow_Directory);
+            this.tab_Xdt.Controls.Add(this.label20);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_Projects);
+            this.tab_Xdt.Controls.Add(this.txt_ExtEmu_Image);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_Image);
+            this.tab_Xdt.Controls.Add(this.txt_ExtEmu_List);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_List);
+            this.tab_Xdt.Controls.Add(this.txt_ExtEmu_Object);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_Object);
+            this.tab_Xdt.Controls.Add(this.txt_ExtEmu_Source);
+            this.tab_Xdt.Controls.Add(this.txt_ExtWin_Source);
+            this.tab_Xdt.Controls.Add(this.label19);
+            this.tab_Xdt.Controls.Add(this.label14);
+            this.tab_Xdt.Controls.Add(this.label13);
+            this.tab_Xdt.Controls.Add(this.label12);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_Library);
+            this.tab_Xdt.Controls.Add(this.label11);
+            this.tab_Xdt.Controls.Add(this.label10);
+            this.tab_Xdt.Controls.Add(this.label9);
+            this.tab_Xdt.Controls.Add(this.label8);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmCopy_Image);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmCopy_List);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmCopy_Object);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmCopy_Source);
+            this.tab_Xdt.Controls.Add(this.label7);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DmCreate_Diskfile);
+            this.tab_Xdt.Controls.Add(this.label6);
+            this.tab_Xdt.Controls.Add(this.label5);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_AsOptions_Image);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_AsOptions_Rpk);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_DiskManager);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_AsOptions_Object);
+            this.tab_Xdt.Controls.Add(this.label4);
+            this.tab_Xdt.Controls.Add(this.label3);
+            this.tab_Xdt.Controls.Add(this.label2);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_Base);
+            this.tab_Xdt.Controls.Add(this.txt_Xdt_Assembler);
+            this.tab_Xdt.Controls.Add(this.txt_Editor_Binary);
+            this.tab_Xdt.Controls.Add(this.txt_Editor_Options);
+            this.tab_Xdt.Controls.Add(this.label1);
+            this.tab_Xdt.Location = new System.Drawing.Point(4, 29);
+            this.tab_Xdt.Name = "tab_Xdt";
+            this.tab_Xdt.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_Xdt.Size = new System.Drawing.Size(1176, 579);
+            this.tab_Xdt.TabIndex = 0;
+            this.tab_Xdt.Text = "XDT";
+            this.tab_Xdt.UseVisualStyleBackColor = true;
+            // 
+            // btn_Ok_Xdt
+            // 
+            this.btn_Ok_Xdt.Location = new System.Drawing.Point(1086, 517);
+            this.btn_Ok_Xdt.Name = "btn_Ok_Xdt";
+            this.btn_Ok_Xdt.Size = new System.Drawing.Size(64, 32);
+            this.btn_Ok_Xdt.TabIndex = 53;
+            this.btn_Ok_Xdt.Text = "OK";
+            this.btn_Ok_Xdt.UseVisualStyleBackColor = true;
+            this.btn_Ok_Xdt.Click += new System.EventHandler(this.btn_Ok_Xdt_Click);
             // 
             // txt_ExtWin_Rpk
             // 
@@ -323,6 +353,14 @@
             this.label26.Size = new System.Drawing.Size(99, 20);
             this.label26.TabIndex = 47;
             this.label26.Text = "BASIC conv.";
+            // 
+            // txt_Xdt_BasConv_Load
+            // 
+            this.txt_Xdt_BasConv_Load.Location = new System.Drawing.Point(294, 270);
+            this.txt_Xdt_BasConv_Load.Name = "txt_Xdt_BasConv_Load";
+            this.txt_Xdt_BasConv_Load.Size = new System.Drawing.Size(378, 26);
+            this.txt_Xdt_BasConv_Load.TabIndex = 46;
+            this.txt_Xdt_BasConv_Load.Text = "-c <basfile>";
             // 
             // txt_Xdt_BasConv
             // 
@@ -712,6 +750,842 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Editor";
             // 
+            // tab_Mame
+            // 
+            this.tab_Mame.Controls.Add(this.btn_Check_Mame);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Machine);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Cartridge);
+            this.tab_Mame.Controls.Add(this.txt_Emu_Path);
+            this.tab_Mame.Controls.Add(this.txt_Emu_HardPath);
+            this.tab_Mame.Controls.Add(this.label52);
+            this.tab_Mame.Controls.Add(this.txt_Emu_DiskPath);
+            this.tab_Mame.Controls.Add(this.label53);
+            this.tab_Mame.Controls.Add(this.txt_Emu_CartPath);
+            this.tab_Mame.Controls.Add(this.label51);
+            this.tab_Mame.Controls.Add(this.txt_Emu_RomPath);
+            this.tab_Mame.Controls.Add(this.label50);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Hdd3);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Hdd2);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd4);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd3);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd2);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb8);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb7);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb6);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb5);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb4);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb3);
+            this.tab_Mame.Controls.Add(this.label49);
+            this.tab_Mame.Controls.Add(this.txt_Emu_Binary);
+            this.tab_Mame.Controls.Add(this.txt_Emu_Options);
+            this.tab_Mame.Controls.Add(this.label48);
+            this.tab_Mame.Controls.Add(this.btn_Ok_Mame);
+            this.tab_Mame.Controls.Add(this.label47);
+            this.tab_Mame.Controls.Add(this.txt_Emu_CS2);
+            this.tab_Mame.Controls.Add(this.txt_Emu_CS1);
+            this.tab_Mame.Controls.Add(this.label45);
+            this.tab_Mame.Controls.Add(this.label46);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_JoyPort);
+            this.tab_Mame.Controls.Add(this.txt_Emu_WDS3);
+            this.tab_Mame.Controls.Add(this.txt_Emu_WDS2);
+            this.tab_Mame.Controls.Add(this.txt_Emu_WDS1);
+            this.tab_Mame.Controls.Add(this.txt_Emu_DSK4);
+            this.tab_Mame.Controls.Add(this.txt_Emu_DSK3);
+            this.tab_Mame.Controls.Add(this.txt_Emu_DSK2);
+            this.tab_Mame.Controls.Add(this.txt_Emu_DSK1);
+            this.tab_Mame.Controls.Add(this.label44);
+            this.tab_Mame.Controls.Add(this.label43);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Hdd1);
+            this.tab_Mame.Controls.Add(this.label42);
+            this.tab_Mame.Controls.Add(this.label41);
+            this.tab_Mame.Controls.Add(this.label40);
+            this.tab_Mame.Controls.Add(this.label39);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd1);
+            this.tab_Mame.Controls.Add(this.label29);
+            this.tab_Mame.Controls.Add(this.label38);
+            this.tab_Mame.Controls.Add(this.label37);
+            this.tab_Mame.Controls.Add(this.label36);
+            this.tab_Mame.Controls.Add(this.label35);
+            this.tab_Mame.Controls.Add(this.label34);
+            this.tab_Mame.Controls.Add(this.label33);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb2);
+            this.tab_Mame.Controls.Add(this.label32);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_IoPort);
+            this.tab_Mame.Controls.Add(this.label31);
+            this.tab_Mame.Controls.Add(this.cmb_Emu_GromPort);
+            this.tab_Mame.Controls.Add(this.label30);
+            this.tab_Mame.Controls.Add(this.label28);
+            this.tab_Mame.Location = new System.Drawing.Point(4, 29);
+            this.tab_Mame.Name = "tab_Mame";
+            this.tab_Mame.Size = new System.Drawing.Size(1176, 579);
+            this.tab_Mame.TabIndex = 5;
+            this.tab_Mame.Text = "MAME";
+            this.tab_Mame.UseVisualStyleBackColor = true;
+            // 
+            // cmb_Emu_Machine
+            // 
+            this.cmb_Emu_Machine.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Machine.FormattingEnabled = true;
+            this.cmb_Emu_Machine.Items.AddRange(new object[] {
+            "-----",
+            "ti99_4a",
+            "ti99_4ev"});
+            this.cmb_Emu_Machine.Location = new System.Drawing.Point(160, 108);
+            this.cmb_Emu_Machine.Name = "cmb_Emu_Machine";
+            this.cmb_Emu_Machine.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Machine.TabIndex = 117;
+            this.cmb_Emu_Machine.Text = "ti99_4ev";
+            this.cmb_Emu_Machine.SelectedIndexChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Cartridge
+            // 
+            this.cmb_Emu_Cartridge.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Cartridge.FormattingEnabled = true;
+            this.cmb_Emu_Cartridge.Items.AddRange(new object[] {
+            "-----",
+            "editass",
+            "minimem",
+            "exbasic"});
+            this.cmb_Emu_Cartridge.Location = new System.Drawing.Point(742, 108);
+            this.cmb_Emu_Cartridge.Name = "cmb_Emu_Cartridge";
+            this.cmb_Emu_Cartridge.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Cartridge.TabIndex = 116;
+            this.cmb_Emu_Cartridge.Text = "invaders";
+            this.cmb_Emu_Cartridge.SelectedIndexChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_Path
+            // 
+            this.txt_Emu_Path.Location = new System.Drawing.Point(480, 12);
+            this.txt_Emu_Path.Name = "txt_Emu_Path";
+            this.txt_Emu_Path.Size = new System.Drawing.Size(383, 26);
+            this.txt_Emu_Path.TabIndex = 115;
+            this.txt_Emu_Path.Text = "e:\\ti99\\";
+            // 
+            // txt_Emu_HardPath
+            // 
+            this.txt_Emu_HardPath.Location = new System.Drawing.Point(607, 76);
+            this.txt_Emu_HardPath.Name = "txt_Emu_HardPath";
+            this.txt_Emu_HardPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_HardPath.TabIndex = 114;
+            this.txt_Emu_HardPath.Text = "hard\\";
+            this.txt_Emu_HardPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(476, 79);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(108, 20);
+            this.label52.TabIndex = 113;
+            this.label52.Text = "Harddisk path";
+            // 
+            // txt_Emu_DiskPath
+            // 
+            this.txt_Emu_DiskPath.Location = new System.Drawing.Point(160, 76);
+            this.txt_Emu_DiskPath.Name = "txt_Emu_DiskPath";
+            this.txt_Emu_DiskPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_DiskPath.TabIndex = 112;
+            this.txt_Emu_DiskPath.Text = "disk\\";
+            this.txt_Emu_DiskPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(32, 79);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(120, 20);
+            this.label53.TabIndex = 111;
+            this.label53.Text = "Floppydisk path";
+            // 
+            // txt_Emu_CartPath
+            // 
+            this.txt_Emu_CartPath.Location = new System.Drawing.Point(607, 44);
+            this.txt_Emu_CartPath.Name = "txt_Emu_CartPath";
+            this.txt_Emu_CartPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_CartPath.TabIndex = 110;
+            this.txt_Emu_CartPath.Text = "cart\\;cart2\\";
+            this.txt_Emu_CartPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(476, 47);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(105, 20);
+            this.label51.TabIndex = 109;
+            this.label51.Text = "Catridge path";
+            // 
+            // txt_Emu_RomPath
+            // 
+            this.txt_Emu_RomPath.Location = new System.Drawing.Point(160, 44);
+            this.txt_Emu_RomPath.Name = "txt_Emu_RomPath";
+            this.txt_Emu_RomPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_RomPath.TabIndex = 108;
+            this.txt_Emu_RomPath.Text = "roms\\";
+            this.txt_Emu_RomPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(32, 47);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(82, 20);
+            this.label50.TabIndex = 107;
+            this.label50.Text = "ROM path";
+            // 
+            // cmb_Emu_Hdd3
+            // 
+            this.cmb_Emu_Hdd3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Hdd3.FormattingEnabled = true;
+            this.cmb_Emu_Hdd3.Items.AddRange(new object[] {
+            "-----",
+            "generic",
+            "st213",
+            "st225",
+            "st251"});
+            this.cmb_Emu_Hdd3.Location = new System.Drawing.Point(480, 412);
+            this.cmb_Emu_Hdd3.Name = "cmb_Emu_Hdd3";
+            this.cmb_Emu_Hdd3.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Hdd3.TabIndex = 106;
+            this.cmb_Emu_Hdd3.Text = "-----";
+            this.cmb_Emu_Hdd3.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Hdd2
+            // 
+            this.cmb_Emu_Hdd2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Hdd2.FormattingEnabled = true;
+            this.cmb_Emu_Hdd2.Items.AddRange(new object[] {
+            "-----",
+            "generic",
+            "st213",
+            "st225",
+            "st251"});
+            this.cmb_Emu_Hdd2.Location = new System.Drawing.Point(480, 378);
+            this.cmb_Emu_Hdd2.Name = "cmb_Emu_Hdd2";
+            this.cmb_Emu_Hdd2.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Hdd2.TabIndex = 105;
+            this.cmb_Emu_Hdd2.Text = "-----";
+            this.cmb_Emu_Hdd2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Fdd4
+            // 
+            this.cmb_Emu_Fdd4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Fdd4.FormattingEnabled = true;
+            this.cmb_Emu_Fdd4.Items.AddRange(new object[] {
+            "-----",
+            "525dd",
+            "525qd",
+            "35dd",
+            "35hd"});
+            this.cmb_Emu_Fdd4.Location = new System.Drawing.Point(480, 310);
+            this.cmb_Emu_Fdd4.Name = "cmb_Emu_Fdd4";
+            this.cmb_Emu_Fdd4.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Fdd4.TabIndex = 104;
+            this.cmb_Emu_Fdd4.Text = "-----";
+            this.cmb_Emu_Fdd4.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Fdd3
+            // 
+            this.cmb_Emu_Fdd3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Fdd3.FormattingEnabled = true;
+            this.cmb_Emu_Fdd3.Items.AddRange(new object[] {
+            "-----",
+            "525dd",
+            "525qd",
+            "35dd",
+            "35hd"});
+            this.cmb_Emu_Fdd3.Location = new System.Drawing.Point(480, 276);
+            this.cmb_Emu_Fdd3.Name = "cmb_Emu_Fdd3";
+            this.cmb_Emu_Fdd3.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Fdd3.TabIndex = 103;
+            this.cmb_Emu_Fdd3.Text = "-----";
+            this.cmb_Emu_Fdd3.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Fdd2
+            // 
+            this.cmb_Emu_Fdd2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Fdd2.FormattingEnabled = true;
+            this.cmb_Emu_Fdd2.Items.AddRange(new object[] {
+            "-----",
+            "525dd",
+            "525qd",
+            "35dd",
+            "35hd"});
+            this.cmb_Emu_Fdd2.Location = new System.Drawing.Point(480, 242);
+            this.cmb_Emu_Fdd2.Name = "cmb_Emu_Fdd2";
+            this.cmb_Emu_Fdd2.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Fdd2.TabIndex = 102;
+            this.cmb_Emu_Fdd2.Text = "525dd";
+            this.cmb_Emu_Fdd2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Peb8
+            // 
+            this.cmb_Emu_Peb8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb8.FormattingEnabled = true;
+            this.cmb_Emu_Peb8.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb8.Location = new System.Drawing.Point(160, 412);
+            this.cmb_Emu_Peb8.Name = "cmb_Emu_Peb8";
+            this.cmb_Emu_Peb8.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb8.TabIndex = 101;
+            this.cmb_Emu_Peb8.Text = "hfdc";
+            this.cmb_Emu_Peb8.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Peb7
+            // 
+            this.cmb_Emu_Peb7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb7.FormattingEnabled = true;
+            this.cmb_Emu_Peb7.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb7.Location = new System.Drawing.Point(160, 378);
+            this.cmb_Emu_Peb7.Name = "cmb_Emu_Peb7";
+            this.cmb_Emu_Peb7.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb7.TabIndex = 100;
+            this.cmb_Emu_Peb7.Text = "-----";
+            this.cmb_Emu_Peb7.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Peb6
+            // 
+            this.cmb_Emu_Peb6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb6.FormattingEnabled = true;
+            this.cmb_Emu_Peb6.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb6.Location = new System.Drawing.Point(160, 344);
+            this.cmb_Emu_Peb6.Name = "cmb_Emu_Peb6";
+            this.cmb_Emu_Peb6.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb6.TabIndex = 99;
+            this.cmb_Emu_Peb6.Text = "-----";
+            this.cmb_Emu_Peb6.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Peb5
+            // 
+            this.cmb_Emu_Peb5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb5.FormattingEnabled = true;
+            this.cmb_Emu_Peb5.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb5.Location = new System.Drawing.Point(160, 310);
+            this.cmb_Emu_Peb5.Name = "cmb_Emu_Peb5";
+            this.cmb_Emu_Peb5.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb5.TabIndex = 98;
+            this.cmb_Emu_Peb5.Text = "-----";
+            this.cmb_Emu_Peb5.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Peb4
+            // 
+            this.cmb_Emu_Peb4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb4.FormattingEnabled = true;
+            this.cmb_Emu_Peb4.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb4.Location = new System.Drawing.Point(160, 276);
+            this.cmb_Emu_Peb4.Name = "cmb_Emu_Peb4";
+            this.cmb_Emu_Peb4.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb4.TabIndex = 97;
+            this.cmb_Emu_Peb4.Text = "-----";
+            this.cmb_Emu_Peb4.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // cmb_Emu_Peb3
+            // 
+            this.cmb_Emu_Peb3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb3.FormattingEnabled = true;
+            this.cmb_Emu_Peb3.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb3.Location = new System.Drawing.Point(160, 242);
+            this.cmb_Emu_Peb3.Name = "cmb_Emu_Peb3";
+            this.cmb_Emu_Peb3.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb3.TabIndex = 96;
+            this.cmb_Emu_Peb3.Text = "-----";
+            this.cmb_Emu_Peb3.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(30, 449);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(64, 20);
+            this.label49.TabIndex = 95;
+            this.label49.Text = "Options";
+            // 
+            // txt_Emu_Binary
+            // 
+            this.txt_Emu_Binary.Location = new System.Drawing.Point(160, 12);
+            this.txt_Emu_Binary.Name = "txt_Emu_Binary";
+            this.txt_Emu_Binary.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_Binary.TabIndex = 94;
+            this.txt_Emu_Binary.Text = "e:\\ti99\\mame64.exe";
+            this.txt_Emu_Binary.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_Options
+            // 
+            this.txt_Emu_Options.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Emu_Options.Location = new System.Drawing.Point(160, 446);
+            this.txt_Emu_Options.Multiline = true;
+            this.txt_Emu_Options.Name = "txt_Emu_Options";
+            this.txt_Emu_Options.Size = new System.Drawing.Size(703, 103);
+            this.txt_Emu_Options.TabIndex = 93;
+            this.txt_Emu_Options.Text = "-----";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(32, 15);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(73, 20);
+            this.label48.TabIndex = 92;
+            this.label48.Text = "Emulator";
+            // 
+            // btn_Ok_Mame
+            // 
+            this.btn_Ok_Mame.Location = new System.Drawing.Point(1086, 517);
+            this.btn_Ok_Mame.Name = "btn_Ok_Mame";
+            this.btn_Ok_Mame.Size = new System.Drawing.Size(64, 32);
+            this.btn_Ok_Mame.TabIndex = 91;
+            this.btn_Ok_Mame.Text = "OK";
+            this.btn_Ok_Mame.UseVisualStyleBackColor = true;
+            this.btn_Ok_Mame.Click += new System.EventHandler(this.btn_Ok_Mame_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(476, 177);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(58, 20);
+            this.label47.TabIndex = 90;
+            this.label47.Text = "Cass 2";
+            // 
+            // txt_Emu_CS2
+            // 
+            this.txt_Emu_CS2.Location = new System.Drawing.Point(607, 174);
+            this.txt_Emu_CS2.Name = "txt_Emu_CS2";
+            this.txt_Emu_CS2.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_CS2.TabIndex = 89;
+            this.txt_Emu_CS2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_CS1
+            // 
+            this.txt_Emu_CS1.Location = new System.Drawing.Point(607, 142);
+            this.txt_Emu_CS1.Name = "txt_Emu_CS1";
+            this.txt_Emu_CS1.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_CS1.TabIndex = 88;
+            this.txt_Emu_CS1.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(476, 145);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(58, 20);
+            this.label45.TabIndex = 87;
+            this.label45.Text = "Cass 1";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(32, 145);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(65, 20);
+            this.label46.TabIndex = 86;
+            this.label46.Text = "Joystick";
+            // 
+            // cmb_Emu_JoyPort
+            // 
+            this.cmb_Emu_JoyPort.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_JoyPort.FormattingEnabled = true;
+            this.cmb_Emu_JoyPort.Items.AddRange(new object[] {
+            "-----",
+            "twinjoy"});
+            this.cmb_Emu_JoyPort.Location = new System.Drawing.Point(160, 142);
+            this.cmb_Emu_JoyPort.Name = "cmb_Emu_JoyPort";
+            this.cmb_Emu_JoyPort.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_JoyPort.TabIndex = 83;
+            this.cmb_Emu_JoyPort.Text = "-----";
+            this.cmb_Emu_JoyPort.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_WDS3
+            // 
+            this.txt_Emu_WDS3.Location = new System.Drawing.Point(607, 412);
+            this.txt_Emu_WDS3.Name = "txt_Emu_WDS3";
+            this.txt_Emu_WDS3.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_WDS3.TabIndex = 82;
+            this.txt_Emu_WDS3.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_WDS2
+            // 
+            this.txt_Emu_WDS2.Location = new System.Drawing.Point(607, 378);
+            this.txt_Emu_WDS2.Name = "txt_Emu_WDS2";
+            this.txt_Emu_WDS2.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_WDS2.TabIndex = 81;
+            this.txt_Emu_WDS2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_WDS1
+            // 
+            this.txt_Emu_WDS1.Location = new System.Drawing.Point(607, 344);
+            this.txt_Emu_WDS1.Name = "txt_Emu_WDS1";
+            this.txt_Emu_WDS1.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_WDS1.TabIndex = 80;
+            this.txt_Emu_WDS1.Text = "hardwds1.chd";
+            this.txt_Emu_WDS1.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_DSK4
+            // 
+            this.txt_Emu_DSK4.Location = new System.Drawing.Point(607, 310);
+            this.txt_Emu_DSK4.Name = "txt_Emu_DSK4";
+            this.txt_Emu_DSK4.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_DSK4.TabIndex = 79;
+            this.txt_Emu_DSK4.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_DSK3
+            // 
+            this.txt_Emu_DSK3.Location = new System.Drawing.Point(607, 276);
+            this.txt_Emu_DSK3.Name = "txt_Emu_DSK3";
+            this.txt_Emu_DSK3.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_DSK3.TabIndex = 78;
+            this.txt_Emu_DSK3.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_DSK2
+            // 
+            this.txt_Emu_DSK2.Location = new System.Drawing.Point(607, 242);
+            this.txt_Emu_DSK2.Name = "txt_Emu_DSK2";
+            this.txt_Emu_DSK2.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_DSK2.TabIndex = 77;
+            this.txt_Emu_DSK2.Text = "flopdsk2.dsk";
+            this.txt_Emu_DSK2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // txt_Emu_DSK1
+            // 
+            this.txt_Emu_DSK1.Location = new System.Drawing.Point(607, 208);
+            this.txt_Emu_DSK1.Name = "txt_Emu_DSK1";
+            this.txt_Emu_DSK1.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_DSK1.TabIndex = 76;
+            this.txt_Emu_DSK1.Text = "flopdsk1.dsk";
+            this.txt_Emu_DSK1.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(352, 415);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(58, 20);
+            this.label44.TabIndex = 74;
+            this.label44.Text = "HDD 3";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(352, 381);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(58, 20);
+            this.label43.TabIndex = 72;
+            this.label43.Text = "HDD 2";
+            // 
+            // cmb_Emu_Hdd1
+            // 
+            this.cmb_Emu_Hdd1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Hdd1.FormattingEnabled = true;
+            this.cmb_Emu_Hdd1.Items.AddRange(new object[] {
+            "-----",
+            "generic",
+            "st213",
+            "st225",
+            "st251"});
+            this.cmb_Emu_Hdd1.Location = new System.Drawing.Point(480, 344);
+            this.cmb_Emu_Hdd1.Name = "cmb_Emu_Hdd1";
+            this.cmb_Emu_Hdd1.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Hdd1.TabIndex = 71;
+            this.cmb_Emu_Hdd1.Text = "generic";
+            this.cmb_Emu_Hdd1.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(352, 347);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(58, 20);
+            this.label42.TabIndex = 70;
+            this.label42.Text = "HDD 1";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(352, 313);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(56, 20);
+            this.label41.TabIndex = 68;
+            this.label41.Text = "FDD 4";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(352, 279);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(56, 20);
+            this.label40.TabIndex = 66;
+            this.label40.Text = "FDD 3";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(352, 245);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(56, 20);
+            this.label39.TabIndex = 64;
+            this.label39.Text = "FDD 2";
+            // 
+            // cmb_Emu_Fdd1
+            // 
+            this.cmb_Emu_Fdd1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Fdd1.FormattingEnabled = true;
+            this.cmb_Emu_Fdd1.Items.AddRange(new object[] {
+            "-----",
+            "525dd",
+            "525qd",
+            "35dd",
+            "35hd"});
+            this.cmb_Emu_Fdd1.Location = new System.Drawing.Point(480, 208);
+            this.cmb_Emu_Fdd1.Name = "cmb_Emu_Fdd1";
+            this.cmb_Emu_Fdd1.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Fdd1.TabIndex = 63;
+            this.cmb_Emu_Fdd1.Text = "525dd";
+            this.cmb_Emu_Fdd1.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(352, 211);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(56, 20);
+            this.label29.TabIndex = 62;
+            this.label29.Text = "FDD 1";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(32, 415);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(50, 20);
+            this.label38.TabIndex = 60;
+            this.label38.Text = "Slot 8";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(32, 381);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(50, 20);
+            this.label37.TabIndex = 58;
+            this.label37.Text = "Slot 7";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(32, 347);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(50, 20);
+            this.label36.TabIndex = 56;
+            this.label36.Text = "Slot 6";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(32, 313);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(50, 20);
+            this.label35.TabIndex = 54;
+            this.label35.Text = "Slot 5";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(32, 279);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(50, 20);
+            this.label34.TabIndex = 52;
+            this.label34.Text = "Slot 4";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(32, 245);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(50, 20);
+            this.label33.TabIndex = 50;
+            this.label33.Text = "Slot 3";
+            // 
+            // cmb_Emu_Peb2
+            // 
+            this.cmb_Emu_Peb2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_Peb2.FormattingEnabled = true;
+            this.cmb_Emu_Peb2.Items.AddRange(new object[] {
+            "-----",
+            "evpc",
+            "hfdc",
+            "horizon",
+            "hsgpl",
+            "ide",
+            "myarcmem",
+            "pcode",
+            "samsmem",
+            "speech",
+            "tifdc",
+            "tirs232",
+            "usbsm",
+            "32kmem",
+            "bwg"});
+            this.cmb_Emu_Peb2.Location = new System.Drawing.Point(160, 208);
+            this.cmb_Emu_Peb2.Name = "cmb_Emu_Peb2";
+            this.cmb_Emu_Peb2.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb2.TabIndex = 49;
+            this.cmb_Emu_Peb2.Text = "evpc";
+            this.cmb_Emu_Peb2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(32, 211);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(50, 20);
+            this.label32.TabIndex = 48;
+            this.label32.Text = "Slot 2";
+            // 
+            // cmb_Emu_IoPort
+            // 
+            this.cmb_Emu_IoPort.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_IoPort.FormattingEnabled = true;
+            this.cmb_Emu_IoPort.Items.AddRange(new object[] {
+            "-----",
+            "peb"});
+            this.cmb_Emu_IoPort.Location = new System.Drawing.Point(160, 174);
+            this.cmb_Emu_IoPort.Name = "cmb_Emu_IoPort";
+            this.cmb_Emu_IoPort.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_IoPort.TabIndex = 47;
+            this.cmb_Emu_IoPort.Text = "peb";
+            this.cmb_Emu_IoPort.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(32, 177);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(58, 20);
+            this.label31.TabIndex = 46;
+            this.label31.Text = "IO port";
+            // 
+            // cmb_Emu_GromPort
+            // 
+            this.cmb_Emu_GromPort.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.cmb_Emu_GromPort.FormattingEnabled = true;
+            this.cmb_Emu_GromPort.Items.AddRange(new object[] {
+            "-----",
+            "single",
+            "multi",
+            "gkracker"});
+            this.cmb_Emu_GromPort.Location = new System.Drawing.Point(607, 108);
+            this.cmb_Emu_GromPort.Name = "cmb_Emu_GromPort";
+            this.cmb_Emu_GromPort.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_GromPort.TabIndex = 45;
+            this.cmb_Emu_GromPort.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(476, 111);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(82, 20);
+            this.label30.TabIndex = 44;
+            this.label30.Text = "Grom Port";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(32, 111);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(69, 20);
+            this.label28.TabIndex = 41;
+            this.label28.Text = "Machine";
+            // 
             // tab_IDE
             // 
             this.tab_IDE.Controls.Add(this.txt_Source);
@@ -786,12 +1660,13 @@
             // 
             // grp_Emu_Cart
             // 
+            this.grp_Emu_Cart.Controls.Add(this.radioButton1);
             this.grp_Emu_Cart.Controls.Add(this.opt_Emu_ExBasic);
             this.grp_Emu_Cart.Controls.Add(this.opt_Emu_MiniMem);
             this.grp_Emu_Cart.Controls.Add(this.opt_Emu_EditAss);
             this.grp_Emu_Cart.Location = new System.Drawing.Point(368, 486);
             this.grp_Emu_Cart.Name = "grp_Emu_Cart";
-            this.grp_Emu_Cart.Size = new System.Drawing.Size(171, 36);
+            this.grp_Emu_Cart.Size = new System.Drawing.Size(241, 37);
             this.grp_Emu_Cart.TabIndex = 26;
             this.grp_Emu_Cart.TabStop = false;
             // 
@@ -818,14 +1693,13 @@
             // opt_Emu_EditAss
             // 
             this.opt_Emu_EditAss.AutoSize = true;
-            this.opt_Emu_EditAss.Checked = true;
             this.opt_Emu_EditAss.Location = new System.Drawing.Point(6, 10);
             this.opt_Emu_EditAss.Name = "opt_Emu_EditAss";
             this.opt_Emu_EditAss.Size = new System.Drawing.Size(49, 24);
             this.opt_Emu_EditAss.TabIndex = 26;
-            this.opt_Emu_EditAss.TabStop = true;
             this.opt_Emu_EditAss.Text = "EA";
             this.opt_Emu_EditAss.UseVisualStyleBackColor = true;
+            this.opt_Emu_EditAss.CheckedChanged += new System.EventHandler(this.opt_Emu_EditAss_CheckedChanged);
             // 
             // chk_Copy_AutoStart
             // 
@@ -1209,494 +2083,60 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripProgressBar1,
+            this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 614);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1184, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tab_Mame
-            // 
-            this.tab_Mame.Controls.Add(this.btn_Ok_Mame);
-            this.tab_Mame.Controls.Add(this.label47);
-            this.tab_Mame.Controls.Add(this.txt_Emu_CS2);
-            this.tab_Mame.Controls.Add(this.txt_Emu_CS1);
-            this.tab_Mame.Controls.Add(this.label45);
-            this.tab_Mame.Controls.Add(this.label46);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_JoyPort);
-            this.tab_Mame.Controls.Add(this.txt_Emu_WDS3);
-            this.tab_Mame.Controls.Add(this.txt_Emu_WDS2);
-            this.tab_Mame.Controls.Add(this.txt_Emu_WDS1);
-            this.tab_Mame.Controls.Add(this.txt_Emu_DSK4);
-            this.tab_Mame.Controls.Add(this.txt_Emu_DSK3);
-            this.tab_Mame.Controls.Add(this.txt_Emu_DSK2);
-            this.tab_Mame.Controls.Add(this.txt_Emu_DSK1);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Hdd3);
-            this.tab_Mame.Controls.Add(this.label44);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Hdd2);
-            this.tab_Mame.Controls.Add(this.label43);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Hdd1);
-            this.tab_Mame.Controls.Add(this.label42);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd4);
-            this.tab_Mame.Controls.Add(this.label41);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd3);
-            this.tab_Mame.Controls.Add(this.label40);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd2);
-            this.tab_Mame.Controls.Add(this.label39);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Fdd1);
-            this.tab_Mame.Controls.Add(this.label29);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_8);
-            this.tab_Mame.Controls.Add(this.label38);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_7);
-            this.tab_Mame.Controls.Add(this.label37);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_6);
-            this.tab_Mame.Controls.Add(this.label36);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_5);
-            this.tab_Mame.Controls.Add(this.label35);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_4);
-            this.tab_Mame.Controls.Add(this.label34);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_3);
-            this.tab_Mame.Controls.Add(this.label33);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Peb_2);
-            this.tab_Mame.Controls.Add(this.label32);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_IoPort);
-            this.tab_Mame.Controls.Add(this.label31);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_GromPort);
-            this.tab_Mame.Controls.Add(this.label30);
-            this.tab_Mame.Controls.Add(this.cmb_Emu_Machine);
-            this.tab_Mame.Controls.Add(this.label28);
-            this.tab_Mame.Location = new System.Drawing.Point(4, 29);
-            this.tab_Mame.Name = "tab_Mame";
-            this.tab_Mame.Size = new System.Drawing.Size(1176, 579);
-            this.tab_Mame.TabIndex = 5;
-            this.tab_Mame.Text = "MAME";
-            this.tab_Mame.UseVisualStyleBackColor = true;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(32, 15);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(69, 20);
-            this.label28.TabIndex = 41;
-            this.label28.Text = "Machine";
-            // 
-            // cmb_Emu_Machine
-            // 
-            this.cmb_Emu_Machine.FormattingEnabled = true;
-            this.cmb_Emu_Machine.Location = new System.Drawing.Point(160, 12);
-            this.cmb_Emu_Machine.Name = "cmb_Emu_Machine";
-            this.cmb_Emu_Machine.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Machine.TabIndex = 42;
-            this.cmb_Emu_Machine.Text = "ti99_4ev";
-            // 
-            // cmb_Emu_GromPort
-            // 
-            this.cmb_Emu_GromPort.FormattingEnabled = true;
-            this.cmb_Emu_GromPort.Location = new System.Drawing.Point(160, 46);
-            this.cmb_Emu_GromPort.Name = "cmb_Emu_GromPort";
-            this.cmb_Emu_GromPort.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_GromPort.TabIndex = 45;
-            this.cmb_Emu_GromPort.Text = "single";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(32, 49);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(82, 20);
-            this.label30.TabIndex = 44;
-            this.label30.Text = "Grom Port";
-            // 
-            // cmb_Emu_IoPort
-            // 
-            this.cmb_Emu_IoPort.FormattingEnabled = true;
-            this.cmb_Emu_IoPort.Location = new System.Drawing.Point(160, 146);
-            this.cmb_Emu_IoPort.Name = "cmb_Emu_IoPort";
-            this.cmb_Emu_IoPort.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_IoPort.TabIndex = 47;
-            this.cmb_Emu_IoPort.Text = "peb";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(32, 149);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(58, 20);
-            this.label31.TabIndex = 46;
-            this.label31.Text = "IO port";
-            // 
-            // cmb_Emu_Peb_2
-            // 
-            this.cmb_Emu_Peb_2.FormattingEnabled = true;
-            this.cmb_Emu_Peb_2.Location = new System.Drawing.Point(160, 180);
-            this.cmb_Emu_Peb_2.Name = "cmb_Emu_Peb_2";
-            this.cmb_Emu_Peb_2.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_2.TabIndex = 49;
-            this.cmb_Emu_Peb_2.Text = "evpc";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(32, 183);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(50, 20);
-            this.label32.TabIndex = 48;
-            this.label32.Text = "Slot 2";
-            // 
-            // cmb_Emu_Peb_3
-            // 
-            this.cmb_Emu_Peb_3.FormattingEnabled = true;
-            this.cmb_Emu_Peb_3.Location = new System.Drawing.Point(160, 214);
-            this.cmb_Emu_Peb_3.Name = "cmb_Emu_Peb_3";
-            this.cmb_Emu_Peb_3.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_3.TabIndex = 51;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(32, 217);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(50, 20);
-            this.label33.TabIndex = 50;
-            this.label33.Text = "Slot 3";
-            // 
-            // cmb_Emu_Peb_4
-            // 
-            this.cmb_Emu_Peb_4.FormattingEnabled = true;
-            this.cmb_Emu_Peb_4.Location = new System.Drawing.Point(160, 248);
-            this.cmb_Emu_Peb_4.Name = "cmb_Emu_Peb_4";
-            this.cmb_Emu_Peb_4.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_4.TabIndex = 53;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(32, 251);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(50, 20);
-            this.label34.TabIndex = 52;
-            this.label34.Text = "Slot 4";
-            // 
-            // cmb_Emu_Peb_5
-            // 
-            this.cmb_Emu_Peb_5.FormattingEnabled = true;
-            this.cmb_Emu_Peb_5.Location = new System.Drawing.Point(160, 282);
-            this.cmb_Emu_Peb_5.Name = "cmb_Emu_Peb_5";
-            this.cmb_Emu_Peb_5.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_5.TabIndex = 55;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(32, 285);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(50, 20);
-            this.label35.TabIndex = 54;
-            this.label35.Text = "Slot 5";
-            // 
-            // cmb_Emu_Peb_6
-            // 
-            this.cmb_Emu_Peb_6.FormattingEnabled = true;
-            this.cmb_Emu_Peb_6.Location = new System.Drawing.Point(160, 316);
-            this.cmb_Emu_Peb_6.Name = "cmb_Emu_Peb_6";
-            this.cmb_Emu_Peb_6.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_6.TabIndex = 57;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(32, 319);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(50, 20);
-            this.label36.TabIndex = 56;
-            this.label36.Text = "Slot 6";
-            // 
-            // cmb_Emu_Peb_7
-            // 
-            this.cmb_Emu_Peb_7.FormattingEnabled = true;
-            this.cmb_Emu_Peb_7.Location = new System.Drawing.Point(160, 350);
-            this.cmb_Emu_Peb_7.Name = "cmb_Emu_Peb_7";
-            this.cmb_Emu_Peb_7.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_7.TabIndex = 59;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(32, 353);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(50, 20);
-            this.label37.TabIndex = 58;
-            this.label37.Text = "Slot 7";
-            // 
-            // cmb_Emu_Peb_8
-            // 
-            this.cmb_Emu_Peb_8.FormattingEnabled = true;
-            this.cmb_Emu_Peb_8.Location = new System.Drawing.Point(160, 384);
-            this.cmb_Emu_Peb_8.Name = "cmb_Emu_Peb_8";
-            this.cmb_Emu_Peb_8.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Peb_8.TabIndex = 61;
-            this.cmb_Emu_Peb_8.Text = "hfdc";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(32, 387);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(50, 20);
-            this.label38.TabIndex = 60;
-            this.label38.Text = "Slot 8";
-            // 
-            // cmb_Emu_Fdd1
-            // 
-            this.cmb_Emu_Fdd1.FormattingEnabled = true;
-            this.cmb_Emu_Fdd1.Location = new System.Drawing.Point(480, 146);
-            this.cmb_Emu_Fdd1.Name = "cmb_Emu_Fdd1";
-            this.cmb_Emu_Fdd1.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Fdd1.TabIndex = 63;
-            this.cmb_Emu_Fdd1.Text = "525dd";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(352, 149);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(56, 20);
-            this.label29.TabIndex = 62;
-            this.label29.Text = "FDD 1";
-            // 
-            // cmb_Emu_Fdd2
-            // 
-            this.cmb_Emu_Fdd2.FormattingEnabled = true;
-            this.cmb_Emu_Fdd2.Location = new System.Drawing.Point(480, 180);
-            this.cmb_Emu_Fdd2.Name = "cmb_Emu_Fdd2";
-            this.cmb_Emu_Fdd2.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Fdd2.TabIndex = 65;
-            this.cmb_Emu_Fdd2.Text = "525dd";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(352, 183);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(56, 20);
-            this.label39.TabIndex = 64;
-            this.label39.Text = "FDD 2";
-            // 
-            // cmb_Emu_Fdd3
-            // 
-            this.cmb_Emu_Fdd3.FormattingEnabled = true;
-            this.cmb_Emu_Fdd3.Location = new System.Drawing.Point(480, 214);
-            this.cmb_Emu_Fdd3.Name = "cmb_Emu_Fdd3";
-            this.cmb_Emu_Fdd3.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Fdd3.TabIndex = 67;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(352, 217);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(56, 20);
-            this.label40.TabIndex = 66;
-            this.label40.Text = "FDD 3";
-            // 
-            // cmb_Emu_Fdd4
-            // 
-            this.cmb_Emu_Fdd4.FormattingEnabled = true;
-            this.cmb_Emu_Fdd4.Location = new System.Drawing.Point(480, 248);
-            this.cmb_Emu_Fdd4.Name = "cmb_Emu_Fdd4";
-            this.cmb_Emu_Fdd4.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Fdd4.TabIndex = 69;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(352, 251);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(56, 20);
-            this.label41.TabIndex = 68;
-            this.label41.Text = "FDD 4";
-            // 
-            // cmb_Emu_Hdd1
-            // 
-            this.cmb_Emu_Hdd1.FormattingEnabled = true;
-            this.cmb_Emu_Hdd1.Location = new System.Drawing.Point(480, 316);
-            this.cmb_Emu_Hdd1.Name = "cmb_Emu_Hdd1";
-            this.cmb_Emu_Hdd1.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Hdd1.TabIndex = 71;
-            this.cmb_Emu_Hdd1.Text = "generic";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(352, 319);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(58, 20);
-            this.label42.TabIndex = 70;
-            this.label42.Text = "HDD 1";
-            // 
-            // cmb_Emu_Hdd2
-            // 
-            this.cmb_Emu_Hdd2.FormattingEnabled = true;
-            this.cmb_Emu_Hdd2.Location = new System.Drawing.Point(480, 350);
-            this.cmb_Emu_Hdd2.Name = "cmb_Emu_Hdd2";
-            this.cmb_Emu_Hdd2.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Hdd2.TabIndex = 73;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(352, 353);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(58, 20);
-            this.label43.TabIndex = 72;
-            this.label43.Text = "HDD 2";
-            // 
-            // cmb_Emu_Hdd3
-            // 
-            this.cmb_Emu_Hdd3.FormattingEnabled = true;
-            this.cmb_Emu_Hdd3.Location = new System.Drawing.Point(480, 384);
-            this.cmb_Emu_Hdd3.Name = "cmb_Emu_Hdd3";
-            this.cmb_Emu_Hdd3.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_Hdd3.TabIndex = 75;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(352, 387);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(58, 20);
-            this.label44.TabIndex = 74;
-            this.label44.Text = "HDD 3";
-            // 
-            // txt_Emu_DSK1
-            // 
-            this.txt_Emu_DSK1.Location = new System.Drawing.Point(607, 146);
-            this.txt_Emu_DSK1.Name = "txt_Emu_DSK1";
-            this.txt_Emu_DSK1.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_DSK1.TabIndex = 76;
-            this.txt_Emu_DSK1.Text = "flopdsk1.dsk";
-            // 
-            // txt_Emu_DSK2
-            // 
-            this.txt_Emu_DSK2.Location = new System.Drawing.Point(607, 180);
-            this.txt_Emu_DSK2.Name = "txt_Emu_DSK2";
-            this.txt_Emu_DSK2.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_DSK2.TabIndex = 77;
-            this.txt_Emu_DSK2.Text = "flopdsk1.dsk";
-            // 
-            // txt_Emu_DSK3
-            // 
-            this.txt_Emu_DSK3.Location = new System.Drawing.Point(607, 214);
-            this.txt_Emu_DSK3.Name = "txt_Emu_DSK3";
-            this.txt_Emu_DSK3.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_DSK3.TabIndex = 78;
-            // 
-            // txt_Emu_DSK4
-            // 
-            this.txt_Emu_DSK4.Location = new System.Drawing.Point(607, 248);
-            this.txt_Emu_DSK4.Name = "txt_Emu_DSK4";
-            this.txt_Emu_DSK4.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_DSK4.TabIndex = 79;
-            // 
-            // txt_Emu_WDS1
-            // 
-            this.txt_Emu_WDS1.Location = new System.Drawing.Point(607, 316);
-            this.txt_Emu_WDS1.Name = "txt_Emu_WDS1";
-            this.txt_Emu_WDS1.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_WDS1.TabIndex = 80;
-            this.txt_Emu_WDS1.Text = "hardwds1.chm";
-            // 
-            // txt_Emu_WDS2
-            // 
-            this.txt_Emu_WDS2.Location = new System.Drawing.Point(607, 350);
-            this.txt_Emu_WDS2.Name = "txt_Emu_WDS2";
-            this.txt_Emu_WDS2.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_WDS2.TabIndex = 81;
-            // 
-            // txt_Emu_WDS3
-            // 
-            this.txt_Emu_WDS3.Location = new System.Drawing.Point(607, 384);
-            this.txt_Emu_WDS3.Name = "txt_Emu_WDS3";
-            this.txt_Emu_WDS3.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_WDS3.TabIndex = 82;
-            // 
-            // cmb_Emu_JoyPort
-            // 
-            this.cmb_Emu_JoyPort.FormattingEnabled = true;
-            this.cmb_Emu_JoyPort.Location = new System.Drawing.Point(160, 80);
-            this.cmb_Emu_JoyPort.Name = "cmb_Emu_JoyPort";
-            this.cmb_Emu_JoyPort.Size = new System.Drawing.Size(121, 28);
-            this.cmb_Emu_JoyPort.TabIndex = 83;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(32, 117);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(58, 20);
-            this.label45.TabIndex = 87;
-            this.label45.Text = "Cass 1";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(32, 83);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(65, 20);
-            this.label46.TabIndex = 86;
-            this.label46.Text = "Joystick";
-            // 
-            // txt_Emu_CS1
-            // 
-            this.txt_Emu_CS1.Location = new System.Drawing.Point(160, 114);
-            this.txt_Emu_CS1.Name = "txt_Emu_CS1";
-            this.txt_Emu_CS1.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_CS1.TabIndex = 88;
-            // 
-            // txt_Emu_CS2
-            // 
-            this.txt_Emu_CS2.Location = new System.Drawing.Point(607, 114);
-            this.txt_Emu_CS2.Name = "txt_Emu_CS2";
-            this.txt_Emu_CS2.Size = new System.Drawing.Size(256, 26);
-            this.txt_Emu_CS2.TabIndex = 89;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(485, 117);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(58, 20);
-            this.label47.TabIndex = 90;
-            this.label47.Text = "Cass 2";
-            // 
-            // btn_Ok_Xdt
-            // 
-            this.btn_Ok_Xdt.Location = new System.Drawing.Point(1086, 517);
-            this.btn_Ok_Xdt.Name = "btn_Ok_Xdt";
-            this.btn_Ok_Xdt.Size = new System.Drawing.Size(64, 32);
-            this.btn_Ok_Xdt.TabIndex = 53;
-            this.btn_Ok_Xdt.Text = "OK";
-            this.btn_Ok_Xdt.UseVisualStyleBackColor = true;
-            this.btn_Ok_Xdt.Click += new System.EventHandler(this.btn_Ok_Xdt_Click);
-            // 
-            // btn_Ok_Mame
-            // 
-            this.btn_Ok_Mame.Location = new System.Drawing.Point(1086, 517);
-            this.btn_Ok_Mame.Name = "btn_Ok_Mame";
-            this.btn_Ok_Mame.Size = new System.Drawing.Size(64, 32);
-            this.btn_Ok_Mame.TabIndex = 91;
-            this.btn_Ok_Mame.Text = "OK";
-            this.btn_Ok_Mame.UseVisualStyleBackColor = true;
-            this.btn_Ok_Mame.Click += new System.EventHandler(this.btn_Ok_Mame_Click);
-            // 
-            // txt_Xdt_BasConv_Load
-            // 
-            this.txt_Xdt_BasConv_Load.Location = new System.Drawing.Point(294, 270);
-            this.txt_Xdt_BasConv_Load.Name = "txt_Xdt_BasConv_Load";
-            this.txt_Xdt_BasConv_Load.Size = new System.Drawing.Size(378, 26);
-            this.txt_Xdt_BasConv_Load.TabIndex = 46;
-            this.txt_Xdt_BasConv_Load.Text = "-c <basfile>";
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.AutoSize = false;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(128, 17);
+            this.toolStripStatusLabel1.Text = "---";
+            this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripStatusLabel1.Visible = false;
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(256, 16);
+            this.toolStripProgressBar1.Visible = false;
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(1169, 17);
+            this.toolStripStatusLabel2.Spring = true;
+            this.toolStripStatusLabel2.Text = "idle";
+            this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_Check_Mame
+            // 
+            this.btn_Check_Mame.Location = new System.Drawing.Point(1016, 517);
+            this.btn_Check_Mame.Name = "btn_Check_Mame";
+            this.btn_Check_Mame.Size = new System.Drawing.Size(64, 32);
+            this.btn_Check_Mame.TabIndex = 118;
+            this.btn_Check_Mame.Text = "check";
+            this.btn_Check_Mame.UseVisualStyleBackColor = true;
+            this.btn_Check_Mame.Click += new System.EventHandler(this.btn_Check_Mame_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(175, 10);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(64, 24);
+            this.radioButton1.TabIndex = 29;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "other";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1713,8 +2153,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tab_Settings.ResumeLayout(false);
-            this.tab_Settings.PerformLayout();
+            this.tab_Xdt.ResumeLayout(false);
+            this.tab_Xdt.PerformLayout();
+            this.tab_Mame.ResumeLayout(false);
+            this.tab_Mame.PerformLayout();
             this.tab_IDE.ResumeLayout(false);
             this.tab_IDE.PerformLayout();
             this.grp_Emu_Cart.ResumeLayout(false);
@@ -1727,8 +2169,8 @@
             this.tab_StdErr.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tab_Mame.ResumeLayout(false);
-            this.tab_Mame.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1737,7 +2179,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tab_Settings;
+        private System.Windows.Forms.TabPage tab_Xdt;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1851,43 +2293,62 @@
         private System.Windows.Forms.TextBox txt_Emu_DSK3;
         private System.Windows.Forms.TextBox txt_Emu_DSK2;
         private System.Windows.Forms.TextBox txt_Emu_DSK1;
-        private System.Windows.Forms.ComboBox cmb_Emu_Hdd3;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ComboBox cmb_Emu_Hdd2;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.ComboBox cmb_Emu_Hdd1;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.ComboBox cmb_Emu_Fdd4;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ComboBox cmb_Emu_Fdd3;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.ComboBox cmb_Emu_Fdd2;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.ComboBox cmb_Emu_Fdd1;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_8;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_7;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_6;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_5;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_4;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_3;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox cmb_Emu_Peb_2;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb2;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ComboBox cmb_Emu_IoPort;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.ComboBox cmb_Emu_GromPort;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.ComboBox cmb_Emu_Machine;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btn_Ok_Xdt;
         private System.Windows.Forms.Button btn_Ok_Mame;
         private System.Windows.Forms.TextBox txt_Xdt_BasConv_Load;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox txt_Emu_Binary;
+        private System.Windows.Forms.TextBox txt_Emu_Options;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ComboBox cmb_Emu_Hdd3;
+        private System.Windows.Forms.ComboBox cmb_Emu_Hdd2;
+        private System.Windows.Forms.ComboBox cmb_Emu_Fdd4;
+        private System.Windows.Forms.ComboBox cmb_Emu_Fdd3;
+        private System.Windows.Forms.ComboBox cmb_Emu_Fdd2;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb8;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb7;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb6;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb5;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb4;
+        private System.Windows.Forms.ComboBox cmb_Emu_Peb3;
+        private System.Windows.Forms.TextBox txt_Emu_Path;
+        private System.Windows.Forms.TextBox txt_Emu_HardPath;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox txt_Emu_DiskPath;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox txt_Emu_CartPath;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox txt_Emu_RomPath;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.ComboBox cmb_Emu_Cartridge;
+        private System.Windows.Forms.ComboBox cmb_Emu_Machine;
+        private System.Windows.Forms.Button btn_Check_Mame;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
