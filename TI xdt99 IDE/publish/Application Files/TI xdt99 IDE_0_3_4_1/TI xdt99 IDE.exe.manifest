@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TI xdt99 IDE.exe" version="0.3.4.1" publicKeyToken="81d07c597fd470d1" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TI xdt99 IDE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TI xdt99 IDE.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC-Manifestoptionen
+          Wenn Sie die Ebene der Windows-Benutzerkontensteuerung ändern möchten, ersetzen Sie den 
+          Knoten "requestedExecutionLevel" durch eine der folgenden Angaben.
+
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
+
+         Wenn Sie Datei- und Registrierungsvirtualisierung für Abwärtskompatibilität 
+         verwenden möchten, löschen Sie den Knoten "requestedExecutionLevel".
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TI xdt99 IDE.exe" size="91056">
+      <assemblyIdentity name="TI xdt99 IDE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0Lwq2D7UhNvG/4gyFyGzoI3nAXCKlfC46Ykvs+ocxHs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="TI xdt99 IDE.exe.config" size="11159">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hKamF4P9fR7YRUdg5c/v+udDYt5eDeRjhmHg0OaOONk=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=RIKER\Michael" issuerKeyHash="371810c39ee7cb0da81c513c19b7b01aa299fb39" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>+lRa58Mx9dip9PolqVLvM9xSQgJi/m6Ylu8juXDJhZA=</DigestValue></Reference></SignedInfo><SignatureValue>Tk1TfBibwcitKJZQC4ilCqzCBfWLhtjhlIAWSMqlUMNm54akc+TZtZ4k5ui5ufD33vP5mSUSgkbFBz3aja++5nNz2qeHp9WNvv9s6HVQPGrXhvlFZ2UpjIGkZ4AVhfHaMrJnsvNMv24tXCOhVPoIzLq8MN/uchqg0peX7ZxmnrE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>0rxIMX8jblhl0ov7sMF7S6N2H6I5Oo/gbZuyYJAQUtVVqvI2ikiHlADIXZwrU7BfAyly7fKsTMZn5E2eu2fpIpdpPWEOc594I8jLVlIrPGv1Pval3rlsDLy3F6bc+Jn0NItCdJZzHZuVb2JucT6JosD/Xpe741xMrpS91heqiAU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9085c970b923ef96986efe62024252dc33ef52a925faf4a9d8f531c3e75a54fa" Description="" Url=""><as:assemblyIdentity name="TI xdt99 IDE.exe" version="0.3.4.1" publicKeyToken="81d07c597fd470d1" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RIKER\Michael</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>+7Padt+ChqLcd9NHbCj7XSVKNhFGhXROtoy+bdGml1k=</DigestValue></Reference></SignedInfo><SignatureValue>bSmWq4HF9XrhYOEzsjsY8xbsi7e0FYtZJDD9bF7phXcwp5Md8sHVkuqzOvRyJ33Yj0D3rTE6Bmf9H1MBYR62LHkKgnI+49/sM6x23yga9O7WFrvOUZcCgEMuXnLcYIq0j+kHEFvmcHqhb9OylPl598NZRadi+S93cw49N8JOsCg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>0rxIMX8jblhl0ov7sMF7S6N2H6I5Oo/gbZuyYJAQUtVVqvI2ikiHlADIXZwrU7BfAyly7fKsTMZn5E2eu2fpIpdpPWEOc594I8jLVlIrPGv1Pval3rlsDLy3F6bc+Jn0NItCdJZzHZuVb2JucT6JosD/Xpe741xMrpS91heqiAU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQOQReA5KD3ptB5fGkQYAdRjANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoAUgBJAEsARQBSAFwATQBpAGMAaABhAGUAbDAeFw0yMDA1MjExMjE3MDRaFw0yMTA1MjExODE3MDRaMCUxIzAhBgNVBAMeGgBSAEkASwBFAFIAXABNAGkAYwBoAGEAZQBsMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDSvEgxfyNuWGXSi/uwwXtLo3Yfojk6j+Btm7JgkBBS1VWq8jaKSIeUAMhdnCtTsF8DKXLt8qxMxmfkTZ67Z+kil2k9YQ5zn3gjyMtWUis8a/U+9qXeuWwMvLcXptz4mfQ0i0J0lnMdm5VvYm5xPomiwP9el7vjXEyulL3WF6qIBQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAHYZsEXhOcdfEDHSJoC6aTTUED+2RDHC1W/4tzc3jhHRRzJmxgeFwaEg5ObFLAOcs7BzKgLdR1ph7CPVU+UMz/qFtFNyOSEpbR2fpF5R18jXrz3QlkjpVn2mgUabgv9ryzib7LDWg7GyZEpw01cufCbhJ7EsmwgW7xKVFqxUlgzM</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
