@@ -782,12 +782,12 @@ namespace TI_xdt99_IDE.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_Assembler_List {
+        public bool IDE_chk_Assembler_Rpk {
             get {
-                return ((bool)(this["IDE_chk_Assembler_List"]));
+                return ((bool)(this["IDE_chk_Assembler_Rpk"]));
             }
             set {
-                this["IDE_chk_Assembler_List"] = value;
+                this["IDE_chk_Assembler_Rpk"] = value;
             }
         }
         
@@ -806,120 +806,120 @@ namespace TI_xdt99_IDE.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_DiskManager_all {
+        public bool IDE_chk_Copy_all {
             get {
-                return ((bool)(this["IDE_chk_DiskManager_all"]));
+                return ((bool)(this["IDE_chk_Copy_all"]));
             }
             set {
-                this["IDE_chk_DiskManager_all"] = value;
+                this["IDE_chk_Copy_all"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_DM_Source {
+        public bool IDE_chk_Copy_Source {
             get {
-                return ((bool)(this["IDE_chk_DM_Source"]));
+                return ((bool)(this["IDE_chk_Copy_Source"]));
             }
             set {
-                this["IDE_chk_DM_Source"] = value;
+                this["IDE_chk_Copy_Source"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_DM_List {
+        public bool IDE_chk_Copy_List {
             get {
-                return ((bool)(this["IDE_chk_DM_List"]));
+                return ((bool)(this["IDE_chk_Copy_List"]));
             }
             set {
-                this["IDE_chk_DM_List"] = value;
+                this["IDE_chk_Copy_List"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_DM_Object {
+        public bool IDE_chk_Copy_Object {
             get {
-                return ((bool)(this["IDE_chk_DM_Object"]));
+                return ((bool)(this["IDE_chk_Copy_Object"]));
             }
             set {
-                this["IDE_chk_DM_Object"] = value;
+                this["IDE_chk_Copy_Object"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_DM_Image {
+        public bool IDE_chk_Copy_Image {
             get {
-                return ((bool)(this["IDE_chk_DM_Image"]));
+                return ((bool)(this["IDE_chk_Copy_Image"]));
             }
             set {
-                this["IDE_chk_DM_Image"] = value;
+                this["IDE_chk_Copy_Image"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_AutoStart {
+        public bool IDE_chk_Copy_Catalog {
             get {
-                return ((bool)(this["IDE_chk_AutoStart"]));
+                return ((bool)(this["IDE_chk_Copy_Catalog"]));
             }
             set {
-                this["IDE_chk_AutoStart"] = value;
+                this["IDE_chk_Copy_Catalog"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_AutoRun {
+        public bool IDE_chk_Copy_AutoStart {
             get {
-                return ((bool)(this["IDE_chk_AutoRun"]));
+                return ((bool)(this["IDE_chk_Copy_AutoStart"]));
             }
             set {
-                this["IDE_chk_AutoRun"] = value;
+                this["IDE_chk_Copy_AutoStart"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_Emu_EA {
+        public bool IDE_opt_Emu_EditAss {
             get {
-                return ((bool)(this["IDE_chk_Emu_EA"]));
+                return ((bool)(this["IDE_opt_Emu_EditAss"]));
             }
             set {
-                this["IDE_chk_Emu_EA"] = value;
+                this["IDE_opt_Emu_EditAss"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_Emu_MM {
+        public bool IDE_opt_Emu_MiniMem {
             get {
-                return ((bool)(this["IDE_chk_Emu_MM"]));
+                return ((bool)(this["IDE_opt_Emu_MiniMem"]));
             }
             set {
-                this["IDE_chk_Emu_MM"] = value;
+                this["IDE_opt_Emu_MiniMem"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IDE_chk_Emu_XB {
+        public bool IDE_opt_Emu_ExBasic {
             get {
-                return ((bool)(this["IDE_chk_Emu_XB"]));
+                return ((bool)(this["IDE_opt_Emu_ExBasic"]));
             }
             set {
-                this["IDE_chk_Emu_XB"] = value;
+                this["IDE_opt_Emu_ExBasic"] = value;
             }
         }
         
@@ -1004,6 +1004,30 @@ namespace TI_xdt99_IDE.Properties {
             }
             set {
                 this["Emu_Cart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IDE_opt_Emu_other {
+            get {
+                return ((bool)(this["IDE_opt_Emu_other"]));
+            }
+            set {
+                this["IDE_opt_Emu_other"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Einstellung {
+            get {
+                return ((bool)(this["Einstellung"]));
+            }
+            set {
+                this["Einstellung"] = value;
             }
         }
     }

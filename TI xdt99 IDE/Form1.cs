@@ -34,7 +34,10 @@ namespace TI_xdt99_IDE
         private static readonly string[] basload1 =
         {
             "100 CALL CLEAR",
-            "110 CALL INIT",
+            "110 CALL INIT"
+        };
+        private static readonly string[] basload2 =
+        {
             "120 DIM T$(5)",
             "130 T$(1)=\"Dis/Fix\"",
             "140 T$(2)=\"Dis/Var\"",
@@ -75,7 +78,7 @@ namespace TI_xdt99_IDE
             "3000 PRINT \"---------- ---- ---------- -\"",
             "3010 CLOSE #1"
         };
-        private static readonly string[] basload2 =
+        private static readonly string[] basload3 =
         {
             "",
             "4000 A$ = \"<tiobjfile>\"",
@@ -84,7 +87,8 @@ namespace TI_xdt99_IDE
             "4030 PRINT \"Loading \" & A$",
             "4040 PRINT \"Please wait ...\"",
             "4050 CALL LOAD( \"DSK1.\" & A$ )",
-            "4060 CALL LINK( B$ )"
+            "4060 PRINT \"Starting \" & B$",
+            "4070 CALL LINK( B$ )"
         };
 
         //  ********************************************************************
@@ -399,6 +403,8 @@ namespace TI_xdt99_IDE
 
             Console.WriteLine("runExternal: bin [" + bin + "], opt [" + opt + "], wrk [" + wrk + "]");
 
+            saveSettingsAll();
+
             n = bin.Length-1;
             while ((n>=0) & (bin.Substring(n,1)!="."))
             {
@@ -554,6 +560,7 @@ namespace TI_xdt99_IDE
             string s;
             Result = false;
             s = txt_Project.Text;
+            // txt_Project.Text = "";
             lst_Projects.DataSource = null;
             l = getProjectList();
             lst_Projects.DataSource = l;
@@ -562,8 +569,10 @@ namespace TI_xdt99_IDE
                 if ( lst_Projects.Items[n].ToString() == s )
                 {
                     lst_Projects.SelectedIndex = n;
+                    // txt_Project.Text = s;
                 }
             }
+            // refreshSourceList();
             return Result;
         }
 
@@ -574,6 +583,7 @@ namespace TI_xdt99_IDE
             string s;
             Result = false;
             s = txt_Source.Text;
+            // txt_Source.Text = "";
             lst_Sourcefiles.DataSource = null;
             l = getSourceList();
             lst_Sourcefiles.DataSource = l;
@@ -582,6 +592,7 @@ namespace TI_xdt99_IDE
                 if (lst_Sourcefiles.Items[n].ToString() == s)
                 {
                     lst_Sourcefiles.SelectedIndex = n;
+                    // txt_Source.Text = s;
                 }
             }
             return Result;
@@ -730,8 +741,8 @@ namespace TI_xdt99_IDE
             txt_Source.Text = sav;
             if (txt_Standard_Output.Text != "")
             {
-                MessageBox.Show("See results...");
-                tabControl1.SelectedTab = tab_StdOut;
+                // MessageBox.Show("See results...");
+                // tabControl1.SelectedTab = tab_StdOut;
             }
             if (txt_Error_Output.Text != "")
             {
@@ -784,7 +795,7 @@ namespace TI_xdt99_IDE
             if (chk_Copy_Object.Checked) { m = m + 1; }
             if (chk_Copy_Image.Checked) { m = m + 1; }
             m = src.Count * m;
-            if (chk_Copy_Catalog.Checked) { m = m + 1; }
+            if ((chk_Copy_Catalog.Checked) | (chk_Copy_AutoStart.Checked)) { m = m + 1; }
 
             toolStripProgressBar1.Minimum = 0;
             toolStripProgressBar1.Maximum = m;
@@ -834,7 +845,7 @@ namespace TI_xdt99_IDE
                 }
             }
             txt_Source.Text = sav;
-            if (chk_Copy_Catalog.Checked)
+            if ((chk_Copy_Catalog.Checked) | (chk_Copy_AutoStart.Checked))
             {
                 // wrk = replacePatterns(txt_Xdt_Base.Text + txt_Xdt_Projects.Text + txt_Project.Text);
                 toolStripStatusLabel1.Text = "autorun"; Application.DoEvents();
@@ -845,11 +856,18 @@ namespace TI_xdt99_IDE
                     {
                         bas.WriteLine(basload1[n]);
                     }
-                    if (chk_Copy_AutoStart.Checked)
+                    if (chk_Copy_Catalog.Checked)
                     {
                         for (int n = 0; n < basload2.Length; n++)
                         {
-                            bas.WriteLine(replacePatterns(basload2[n]));
+                            bas.WriteLine(basload2[n]);
+                        }
+                    }
+                    if (chk_Copy_AutoStart.Checked)
+                    {
+                        for (int n = 0; n < basload3.Length; n++)
+                        {
+                            bas.WriteLine(replacePatterns(basload3[n]));
                         }
                     }
                 }
@@ -874,7 +892,7 @@ namespace TI_xdt99_IDE
             if (txt_Standard_Output.Text != "")
             {
                 // MessageBox.Show("See results...");
-                tabControl1.SelectedTab = tab_StdOut;
+                // tabControl1.SelectedTab = tab_StdOut;
             }
             if (txt_Error_Output.Text != "")
             {
@@ -918,7 +936,7 @@ namespace TI_xdt99_IDE
             if (txt_Standard_Output.Text != "")
             {
                 // MessageBox.Show("See results...");
-                tabControl1.SelectedTab = tab_StdOut;
+                // tabControl1.SelectedTab = tab_StdOut;
             }
             if (txt_Error_Output.Text != "")
             {
@@ -970,12 +988,12 @@ namespace TI_xdt99_IDE
                 Properties.Settings.Default["ExtEmu_Image"] = txt_ExtEmu_Image.Text;
                 Properties.Settings.Default["Emu_Load"] = txt_Emu_Load.Text;
                 Properties.Settings.Default.Save();
-                MessageBox.Show("settings saved");
+                // MessageBox.Show("settings saved");
                 Result = true;
             }
             catch (Exception e)
             {
-                MessageBox.Show("error saving xdt99 settings !");
+                // MessageBox.Show("error saving xdt99 settings !");
                 Console.WriteLine(e.Message);
                 
             }
@@ -1057,7 +1075,7 @@ namespace TI_xdt99_IDE
             }
             catch (Exception e)
             {
-                MessageBox.Show("error loading xdt99 settings !");
+                // MessageBox.Show("error loading xdt99 settings !");
                 Console.WriteLine(e.Message);
             }
             return Result;
@@ -1104,12 +1122,12 @@ namespace TI_xdt99_IDE
                 Properties.Settings.Default["Emu_WDS2"] = txt_Emu_WDS2.Text;
                 Properties.Settings.Default["Emu_WDS3"] = txt_Emu_WDS3.Text;
                 Properties.Settings.Default.Save();
-                MessageBox.Show("settings saved");
+                // MessageBox.Show("settings saved");
                 Result = true;
             }
             catch (Exception e)
             {
-                MessageBox.Show("error saving emulator settings !");
+                // MessageBox.Show("error saving emulator settings !");
                 Console.WriteLine(e.Message);
             }
             return Result;
@@ -1196,7 +1214,7 @@ namespace TI_xdt99_IDE
             }
             catch (Exception e)
             {
-                MessageBox.Show("error loading emulator settings !");
+                // MessageBox.Show("error loading emulator settings !");
                 Console.WriteLine(e.Message);
             }
             return Result;
@@ -1206,15 +1224,96 @@ namespace TI_xdt99_IDE
         {
             bool Result;
             Result = false;
-
+            try
+            {
+                Properties.Settings.Default["IDE_Project"] = txt_Project.Text;
+                Properties.Settings.Default["IDE_Source"] = txt_Source.Text;
+                Properties.Settings.Default["IDE_chk_Assembler_all"] = chk_Assembler_all.Checked;
+                Properties.Settings.Default["IDE_chk_Assembler_Object"] = chk_Assembler_Object.Checked;
+                Properties.Settings.Default["IDE_chk_Assembler_Image"] = chk_Assembler_Image.Checked;
+                Properties.Settings.Default["IDE_chk_Assembler_Rpk"] = chk_Assembler_Rpk.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_all"] = chk_Copy_all.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_Source"] = chk_Copy_Source.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_List"] = chk_Copy_List.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_Object"] = chk_Copy_Object.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_Image"] = chk_Copy_Image.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_Catalog"] = chk_Copy_Catalog.Checked;
+                Properties.Settings.Default["IDE_chk_Copy_AutoStart"] = chk_Copy_AutoStart.Checked;
+                Properties.Settings.Default["IDE_opt_Emu_EditAss"] = opt_Emu_EditAss.Checked;
+                Properties.Settings.Default["IDE_opt_Emu_MiniMem"] = opt_Emu_MiniMem.Checked;
+                Properties.Settings.Default["IDE_opt_Emu_ExBasic"] = opt_Emu_ExBasic.Checked;
+                Properties.Settings.Default["IDE_opt_Emu_other"] = opt_Emu_other.Checked;
+                Properties.Settings.Default.Save();
+                // MessageBox.Show("settings saved");
+                Result = true;
+            }
+            catch (Exception e)
+            {
+                // MessageBox.Show("error saving ide settings !");
+                Console.WriteLine(e.Message);
+            }
             return Result;
         }
 
         private bool loadSettingsIde()
         {
             bool Result;
+            string s;
+            bool b;
             Result = false;
+            try
+            {
+                s = Properties.Settings.Default["IDE_Project"].ToString(); if (s != "")
+                { txt_Project.Text = s; }
+                refreshProjectList();
+                s = Properties.Settings.Default["IDE_Source"].ToString(); if (s != "")
+                { txt_Source.Text = s; }
+                refreshSourceList();
+                b = (bool)Properties.Settings.Default["IDE_chk_Assembler_all"]; if (b)
+                { chk_Assembler_all.Checked = b; }
+                chk_Assembler_Object.Checked = (bool)Properties.Settings.Default["IDE_chk_Assembler_Object"];
+                chk_Assembler_Image.Checked = (bool)Properties.Settings.Default["IDE_chk_Assembler_Image"];
+                chk_Assembler_Rpk.Checked = (bool)Properties.Settings.Default["IDE_chk_Assembler_Rpk"];
+                chk_Copy_all.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_all"];
+                chk_Copy_Source.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_Source"];
+                chk_Copy_List.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_List"];
+                chk_Copy_Object.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_Object"];
+                chk_Copy_Image.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_Image"];
+                chk_Copy_Catalog.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_Catalog"];
+                chk_Copy_AutoStart.Checked = (bool)Properties.Settings.Default["IDE_chk_Copy_AutoStart"];
+                opt_Emu_EditAss.Checked = (bool)Properties.Settings.Default["IDE_opt_Emu_EditAss"];
+                opt_Emu_MiniMem.Checked = (bool)Properties.Settings.Default["IDE_opt_Emu_MiniMem"];
+                opt_Emu_ExBasic.Checked = (bool)Properties.Settings.Default["IDE_opt_Emu_ExBasic"];
+                opt_Emu_other.Checked = (bool)Properties.Settings.Default["IDE_opt_Emu_other"];
+                Result = true;
+            }
+            catch (Exception e)
+            {
+                // MessageBox.Show("error loading ide settings !");
+                Console.WriteLine(e.Message);
+            }
+            return Result;
+        }
 
+        private bool saveSettingsAll()
+        {
+            bool Result;
+            Result = false;
+            saveSettingsXdt();
+            saveSettingsMame();
+            saveSettingsIde();
+            Result = true;
+            return Result;
+        }
+
+        private bool loadSettingsAll()
+        {
+            bool Result;
+            Result = false;
+            loadSettingsXdt();
+            loadSettingsMame();
+            loadSettingsIde();
+            Result = true;
             return Result;
         }
 
@@ -1228,6 +1327,25 @@ namespace TI_xdt99_IDE
 
         // +--------------------------------------------------------------------+
         // | buttons                                                            |
+        // +--------------------------------------------------------------------+
+
+        private void btn_Ok_Xdt_Click(object sender, EventArgs e)
+        {
+            saveSettingsXdt();
+        }
+
+        // +--------------------------------------------------------------------+
+
+        private void btn_Check_Mame_Click(object sender, EventArgs e)
+        {
+            startEmulator();
+        }
+
+        private void btn_Ok_Mame_Click(object sender, EventArgs e)
+        {
+            saveSettingsMame();
+        }
+
         // +--------------------------------------------------------------------+
 
         private void btn_Editor_Click(object sender, EventArgs e)
@@ -1252,19 +1370,11 @@ namespace TI_xdt99_IDE
             startEmulator();
         }
 
-        private void btn_Ok_Xdt_Click(object sender, EventArgs e)
+        private void btn_AsmDskEmu_Click(object sender, EventArgs e)
         {
-            saveSettingsXdt();
-        }
-
-        private void btn_Check_Mame_Click(object sender, EventArgs e)
-        {
+            startAssembler();
+            startDiskManager();
             startEmulator();
-        }
-
-        private void btn_Ok_Mame_Click(object sender, EventArgs e)
-        {
-            saveSettingsMame();
         }
 
         // create new project sub folder
@@ -1278,6 +1388,11 @@ namespace TI_xdt99_IDE
         private void btn_New_Source_Click(object sender, EventArgs e)
         {
             // ...
+        }
+
+        private void btn_Ok_IDE_Click(object sender, EventArgs e)
+        {
+            saveSettingsIde();
         }
 
         // +--------------------------------------------------------------------+
@@ -1330,11 +1445,11 @@ namespace TI_xdt99_IDE
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadSettingsXdt();
-            loadSettingsMame();
-            loadSettingsIde();
+            loadSettingsAll();
         }
 
+        // updates the "options" textbox whenever any of the options is changed
+        // one sub for all textboxes, comboboxes etc "onchange" events)
         private void txt_Emu_TextChanged(object sender, EventArgs e)
         {
             refreshEmuOptions();
@@ -1352,10 +1467,11 @@ namespace TI_xdt99_IDE
             }
         }
 
-        private void opt_Emu_EditAss_CheckedChanged(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            saveSettingsAll();
         }
+
     }
 
 }

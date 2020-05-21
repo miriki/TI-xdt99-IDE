@@ -191,40 +191,40 @@
     <Setting Name="IDE_chk_Assembler_Object" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_Assembler_List" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Assembler_Rpk" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="IDE_chk_Assembler_Image" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_DiskManager_all" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_all" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_DM_Source" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_Source" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_DM_List" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_List" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_DM_Object" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_Object" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_DM_Image" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_Image" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_AutoStart" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_Catalog" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_AutoRun" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_chk_Copy_AutoStart" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_Emu_EA" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_opt_Emu_EditAss" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_Emu_MM" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_opt_Emu_MiniMem" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="IDE_chk_Emu_XB" Type="System.Boolean" Scope="User">
+    <Setting Name="IDE_opt_Emu_ExBasic" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="Emu_Binary" Type="System.String" Scope="User">
@@ -247,6 +247,12 @@
     </Setting>
     <Setting Name="Emu_Cart" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IDE_opt_Emu_other" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Einstellung" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

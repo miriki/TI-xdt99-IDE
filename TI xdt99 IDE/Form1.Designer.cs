@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_Xdt = new System.Windows.Forms.TabPage();
-            this.btn_Ok_Xdt = new System.Windows.Forms.Button();
             this.txt_ExtWin_Rpk = new System.Windows.Forms.TextBox();
             this.txt_ExtWin_BasB = new System.Windows.Forms.TextBox();
             this.txt_ExtWin_BasT = new System.Windows.Forms.TextBox();
@@ -84,6 +83,7 @@
             this.txt_Editor_Options = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tab_Mame = new System.Windows.Forms.TabPage();
+            this.btn_Check_Mame = new System.Windows.Forms.Button();
             this.cmb_Emu_Machine = new System.Windows.Forms.ComboBox();
             this.cmb_Emu_Cartridge = new System.Windows.Forms.ComboBox();
             this.txt_Emu_Path = new System.Windows.Forms.TextBox();
@@ -110,7 +110,6 @@
             this.txt_Emu_Binary = new System.Windows.Forms.TextBox();
             this.txt_Emu_Options = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.btn_Ok_Mame = new System.Windows.Forms.Button();
             this.label47 = new System.Windows.Forms.Label();
             this.txt_Emu_CS2 = new System.Windows.Forms.TextBox();
             this.txt_Emu_CS1 = new System.Windows.Forms.TextBox();
@@ -147,11 +146,13 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.tab_IDE = new System.Windows.Forms.TabPage();
+            this.btn_AsmDskEmu = new System.Windows.Forms.Button();
             this.txt_Source = new System.Windows.Forms.TextBox();
             this.txt_Project = new System.Windows.Forms.TextBox();
             this.chk_Assembler_Rpk = new System.Windows.Forms.CheckBox();
             this.btn_Emulator = new System.Windows.Forms.Button();
             this.grp_Emu_Cart = new System.Windows.Forms.GroupBox();
+            this.opt_Emu_other = new System.Windows.Forms.RadioButton();
             this.opt_Emu_ExBasic = new System.Windows.Forms.RadioButton();
             this.opt_Emu_MiniMem = new System.Windows.Forms.RadioButton();
             this.opt_Emu_EditAss = new System.Windows.Forms.RadioButton();
@@ -197,8 +198,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btn_Check_Mame = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tab_Xdt.SuspendLayout();
             this.tab_Mame.SuspendLayout();
@@ -229,7 +228,6 @@
             // 
             // tab_Xdt
             // 
-            this.tab_Xdt.Controls.Add(this.btn_Ok_Xdt);
             this.tab_Xdt.Controls.Add(this.txt_ExtWin_Rpk);
             this.tab_Xdt.Controls.Add(this.txt_ExtWin_BasB);
             this.tab_Xdt.Controls.Add(this.txt_ExtWin_BasT);
@@ -289,16 +287,6 @@
             this.tab_Xdt.TabIndex = 0;
             this.tab_Xdt.Text = "XDT";
             this.tab_Xdt.UseVisualStyleBackColor = true;
-            // 
-            // btn_Ok_Xdt
-            // 
-            this.btn_Ok_Xdt.Location = new System.Drawing.Point(1086, 517);
-            this.btn_Ok_Xdt.Name = "btn_Ok_Xdt";
-            this.btn_Ok_Xdt.Size = new System.Drawing.Size(64, 32);
-            this.btn_Ok_Xdt.TabIndex = 53;
-            this.btn_Ok_Xdt.Text = "OK";
-            this.btn_Ok_Xdt.UseVisualStyleBackColor = true;
-            this.btn_Ok_Xdt.Click += new System.EventHandler(this.btn_Ok_Xdt_Click);
             // 
             // txt_ExtWin_Rpk
             // 
@@ -779,7 +767,6 @@
             this.tab_Mame.Controls.Add(this.txt_Emu_Binary);
             this.tab_Mame.Controls.Add(this.txt_Emu_Options);
             this.tab_Mame.Controls.Add(this.label48);
-            this.tab_Mame.Controls.Add(this.btn_Ok_Mame);
             this.tab_Mame.Controls.Add(this.label47);
             this.tab_Mame.Controls.Add(this.txt_Emu_CS2);
             this.tab_Mame.Controls.Add(this.txt_Emu_CS1);
@@ -822,19 +809,29 @@
             this.tab_Mame.Text = "MAME";
             this.tab_Mame.UseVisualStyleBackColor = true;
             // 
+            // btn_Check_Mame
+            // 
+            this.btn_Check_Mame.Location = new System.Drawing.Point(799, 517);
+            this.btn_Check_Mame.Name = "btn_Check_Mame";
+            this.btn_Check_Mame.Size = new System.Drawing.Size(64, 32);
+            this.btn_Check_Mame.TabIndex = 118;
+            this.btn_Check_Mame.Text = "run";
+            this.btn_Check_Mame.UseVisualStyleBackColor = true;
+            this.btn_Check_Mame.Click += new System.EventHandler(this.btn_Check_Mame_Click);
+            // 
             // cmb_Emu_Machine
             // 
             this.cmb_Emu_Machine.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cmb_Emu_Machine.FormattingEnabled = true;
             this.cmb_Emu_Machine.Items.AddRange(new object[] {
             "-----",
-            "ti99_4a",
-            "ti99_4ev"});
+            "TI99_4a",
+            "TI99_4ev"});
             this.cmb_Emu_Machine.Location = new System.Drawing.Point(160, 108);
             this.cmb_Emu_Machine.Name = "cmb_Emu_Machine";
             this.cmb_Emu_Machine.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Machine.TabIndex = 117;
-            this.cmb_Emu_Machine.Text = "ti99_4ev";
+            this.cmb_Emu_Machine.Text = "TI99_4ev";
             this.cmb_Emu_Machine.SelectedIndexChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // cmb_Emu_Cartridge
@@ -843,14 +840,14 @@
             this.cmb_Emu_Cartridge.FormattingEnabled = true;
             this.cmb_Emu_Cartridge.Items.AddRange(new object[] {
             "-----",
-            "editass",
-            "minimem",
-            "exbasic"});
+            "EditAss",
+            "MiniMem",
+            "ExBasic"});
             this.cmb_Emu_Cartridge.Location = new System.Drawing.Point(742, 108);
             this.cmb_Emu_Cartridge.Name = "cmb_Emu_Cartridge";
             this.cmb_Emu_Cartridge.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Cartridge.TabIndex = 116;
-            this.cmb_Emu_Cartridge.Text = "invaders";
+            this.cmb_Emu_Cartridge.Text = "ExBasic";
             this.cmb_Emu_Cartridge.SelectedIndexChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_Path
@@ -860,6 +857,7 @@
             this.txt_Emu_Path.Size = new System.Drawing.Size(383, 26);
             this.txt_Emu_Path.TabIndex = 115;
             this.txt_Emu_Path.Text = "e:\\ti99\\";
+            this.txt_Emu_Path.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_HardPath
             // 
@@ -1216,16 +1214,6 @@
             this.label48.Size = new System.Drawing.Size(73, 20);
             this.label48.TabIndex = 92;
             this.label48.Text = "Emulator";
-            // 
-            // btn_Ok_Mame
-            // 
-            this.btn_Ok_Mame.Location = new System.Drawing.Point(1086, 517);
-            this.btn_Ok_Mame.Name = "btn_Ok_Mame";
-            this.btn_Ok_Mame.Size = new System.Drawing.Size(64, 32);
-            this.btn_Ok_Mame.TabIndex = 91;
-            this.btn_Ok_Mame.Text = "OK";
-            this.btn_Ok_Mame.UseVisualStyleBackColor = true;
-            this.btn_Ok_Mame.Click += new System.EventHandler(this.btn_Ok_Mame_Click);
             // 
             // label47
             // 
@@ -1588,6 +1576,7 @@
             // 
             // tab_IDE
             // 
+            this.tab_IDE.Controls.Add(this.btn_AsmDskEmu);
             this.tab_IDE.Controls.Add(this.txt_Source);
             this.tab_IDE.Controls.Add(this.txt_Project);
             this.tab_IDE.Controls.Add(this.chk_Assembler_Rpk);
@@ -1621,6 +1610,17 @@
             this.tab_IDE.TabIndex = 1;
             this.tab_IDE.Text = "IDE";
             this.tab_IDE.UseVisualStyleBackColor = true;
+            // 
+            // btn_AsmDskEmu
+            // 
+            this.btn_AsmDskEmu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AsmDskEmu.Location = new System.Drawing.Point(545, 456);
+            this.btn_AsmDskEmu.Name = "btn_AsmDskEmu";
+            this.btn_AsmDskEmu.Size = new System.Drawing.Size(64, 32);
+            this.btn_AsmDskEmu.TabIndex = 93;
+            this.btn_AsmDskEmu.Text = "ADE";
+            this.btn_AsmDskEmu.UseVisualStyleBackColor = true;
+            this.btn_AsmDskEmu.Click += new System.EventHandler(this.btn_AsmDskEmu_Click);
             // 
             // txt_Source
             // 
@@ -1660,7 +1660,7 @@
             // 
             // grp_Emu_Cart
             // 
-            this.grp_Emu_Cart.Controls.Add(this.radioButton1);
+            this.grp_Emu_Cart.Controls.Add(this.opt_Emu_other);
             this.grp_Emu_Cart.Controls.Add(this.opt_Emu_ExBasic);
             this.grp_Emu_Cart.Controls.Add(this.opt_Emu_MiniMem);
             this.grp_Emu_Cart.Controls.Add(this.opt_Emu_EditAss);
@@ -1670,13 +1670,25 @@
             this.grp_Emu_Cart.TabIndex = 26;
             this.grp_Emu_Cart.TabStop = false;
             // 
+            // opt_Emu_other
+            // 
+            this.opt_Emu_other.AutoSize = true;
+            this.opt_Emu_other.Location = new System.Drawing.Point(175, 10);
+            this.opt_Emu_other.Name = "opt_Emu_other";
+            this.opt_Emu_other.Size = new System.Drawing.Size(64, 24);
+            this.opt_Emu_other.TabIndex = 29;
+            this.opt_Emu_other.Text = "other";
+            this.opt_Emu_other.UseVisualStyleBackColor = true;
+            // 
             // opt_Emu_ExBasic
             // 
             this.opt_Emu_ExBasic.AutoSize = true;
+            this.opt_Emu_ExBasic.Checked = true;
             this.opt_Emu_ExBasic.Location = new System.Drawing.Point(120, 10);
             this.opt_Emu_ExBasic.Name = "opt_Emu_ExBasic";
             this.opt_Emu_ExBasic.Size = new System.Drawing.Size(49, 24);
             this.opt_Emu_ExBasic.TabIndex = 28;
+            this.opt_Emu_ExBasic.TabStop = true;
             this.opt_Emu_ExBasic.Text = "XB";
             this.opt_Emu_ExBasic.UseVisualStyleBackColor = true;
             // 
@@ -1699,7 +1711,6 @@
             this.opt_Emu_EditAss.TabIndex = 26;
             this.opt_Emu_EditAss.Text = "EA";
             this.opt_Emu_EditAss.UseVisualStyleBackColor = true;
-            this.opt_Emu_EditAss.CheckedChanged += new System.EventHandler(this.opt_Emu_EditAss_CheckedChanged);
             // 
             // chk_Copy_AutoStart
             // 
@@ -2116,28 +2127,6 @@
             this.toolStripStatusLabel2.Text = "idle";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btn_Check_Mame
-            // 
-            this.btn_Check_Mame.Location = new System.Drawing.Point(1016, 517);
-            this.btn_Check_Mame.Name = "btn_Check_Mame";
-            this.btn_Check_Mame.Size = new System.Drawing.Size(64, 32);
-            this.btn_Check_Mame.TabIndex = 118;
-            this.btn_Check_Mame.Text = "check";
-            this.btn_Check_Mame.UseVisualStyleBackColor = true;
-            this.btn_Check_Mame.Click += new System.EventHandler(this.btn_Check_Mame_Click);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(175, 10);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(64, 24);
-            this.radioButton1.TabIndex = 29;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "other";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2150,7 +2139,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "miriki TI xdt99 IDE";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tab_Xdt.ResumeLayout(false);
@@ -2315,8 +2305,6 @@
         private System.Windows.Forms.ComboBox cmb_Emu_GromPort;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button btn_Ok_Xdt;
-        private System.Windows.Forms.Button btn_Ok_Mame;
         private System.Windows.Forms.TextBox txt_Xdt_BasConv_Load;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txt_Emu_Binary;
@@ -2348,7 +2336,8 @@
         private System.Windows.Forms.ComboBox cmb_Emu_Cartridge;
         private System.Windows.Forms.ComboBox cmb_Emu_Machine;
         private System.Windows.Forms.Button btn_Check_Mame;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton opt_Emu_other;
+        private System.Windows.Forms.Button btn_AsmDskEmu;
     }
 }
 
