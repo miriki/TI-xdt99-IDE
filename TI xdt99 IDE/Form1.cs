@@ -1329,30 +1329,16 @@ namespace TI_xdt99_IDE
         // | buttons                                                            |
         // +--------------------------------------------------------------------+
 
-        private void btn_Ok_Xdt_Click(object sender, EventArgs e)
-        {
-            saveSettingsXdt();
-        }
-
-        // +--------------------------------------------------------------------+
-
         private void btn_Check_Mame_Click(object sender, EventArgs e)
         {
             startEmulator();
         }
 
-        private void btn_Ok_Mame_Click(object sender, EventArgs e)
-        {
-            saveSettingsMame();
-        }
-
-        // +--------------------------------------------------------------------+
+         // +--------------------------------------------------------------------+
 
         private void btn_Editor_Click(object sender, EventArgs e)
         {
-
             startEditor();
-
         }
 
         private void btn_Assembler_Click(object sender, EventArgs e)
@@ -1380,6 +1366,7 @@ namespace TI_xdt99_IDE
         // create new project sub folder
         private void btn_New_Project_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("not implementet yet");
             // ...
         }
 
@@ -1387,12 +1374,8 @@ namespace TI_xdt99_IDE
         // use an optional template file, create empty file otherwise
         private void btn_New_Source_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("not implementet yet");
             // ...
-        }
-
-        private void btn_Ok_IDE_Click(object sender, EventArgs e)
-        {
-            saveSettingsIde();
         }
 
         // +--------------------------------------------------------------------+
