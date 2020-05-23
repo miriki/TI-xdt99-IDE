@@ -112,12 +112,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EEA061C23976730D66605349EE447A65"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_400711DCDB654B47AE8C6D84AE76315B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -173,6 +167,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_01E1C7CB95CFB9DC7D9AE9A910FBF8B7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_EEA061C23976730D66605349EE447A65"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -636,15 +636,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TI xdt99 IDE"
-        "ProductCode" = "8:{FC007B1B-BF29-4636-AD16-A36B01C5CBF6}"
-        "PackageCode" = "8:{1F2FE213-3F19-4BE0-A037-24982F052CDF}"
+        "ProductCode" = "8:{ADD27A9E-E9CD-4FFE-AEB9-B375154678EC}"
+        "PackageCode" = "8:{67250F89-3A0B-41AB-92B1-C893B797777A}"
         "UpgradeCode" = "8:{E27304E2-A634-4A4A-88AF-3F5FD5768D9B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:0.3.5.1"
         "Manufacturer" = "8:miriki"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1186,7 +1186,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_400711DCDB654B47AE8C6D84AE76315B"
             {
-            "SourcePath" = "8:..\\TI xdt99 IDE\\obj\\Debug\\TI xdt99 IDE.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2DD79CCA623E44DE9FB8ECFAD45D8754"

@@ -251,7 +251,7 @@
     <Setting Name="IDE_opt_Emu_other" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="Einstellung" Type="System.Boolean" Scope="User">
+    <Setting Name="Emu_Options" Type="System.String" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

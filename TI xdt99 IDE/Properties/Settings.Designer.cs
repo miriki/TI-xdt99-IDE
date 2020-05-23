@@ -1022,12 +1022,12 @@ namespace TI_xdt99_IDE.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Einstellung {
+        public string Emu_Options {
             get {
-                return ((bool)(this["Einstellung"]));
+                return ((string)(this["Emu_Options"]));
             }
             set {
-                this["Einstellung"] = value;
+                this["Emu_Options"] = value;
             }
         }
     }
