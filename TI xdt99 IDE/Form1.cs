@@ -1375,7 +1375,6 @@ namespace TI_xdt99_IDE
         {
             bool Result;
             string s;
-            bool b;
             Result = false;
             try
             {
