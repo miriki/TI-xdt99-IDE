@@ -778,6 +778,7 @@ namespace TI_xdt99_IDE
         // generate object file if chk_assemble_object is set
         // generate image file if chk_assemble_image is set
         // generate mess rpk if chk_assemble_mess is set
+        private bool stop_AsmErr = true;
         private bool startAssembler()
         {
             bool Result;
@@ -859,8 +860,11 @@ namespace TI_xdt99_IDE
             }
             if (txt_Error_Output.Text != "")
             {
-                MessageBox.Show("There were errors!");
                 tabControl1.SelectedTab = tab_StdErr;
+                if (stop_AsmErr)
+                {
+                    MessageBox.Show("There were errors!");
+                }
             }
 
             toolStripStatusLabel2.Text = "idle";
@@ -891,7 +895,7 @@ namespace TI_xdt99_IDE
             src = new List<string>();
             txt_Standard_Output.Text = "";
             txt_Error_Output.Text = "";
-            if (chk_Assembler_all.Checked)
+            if (chk_Copy_all.Checked)
             {
                 foreach (string s in lst_Sourcefiles.Items)
                 {
@@ -1472,7 +1476,11 @@ namespace TI_xdt99_IDE
 
         private void btn_AsmDskEmu_Click(object sender, EventArgs e)
         {
+            bool err;
+            err = stop_AsmErr;
+            stop_AsmErr = false;
             startAssembler();
+            stop_AsmErr = err;
             startDiskManager();
             startEmulator();
         }

@@ -83,6 +83,7 @@
             this.txt_Editor_Options = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tab_MAME = new System.Windows.Forms.TabPage();
+            this.txt_Emu_AddOptions = new System.Windows.Forms.TextBox();
             this.btn_Check_Mame = new System.Windows.Forms.Button();
             this.cmb_Emu_Machine = new System.Windows.Forms.ComboBox();
             this.cmb_Emu_Cartridge = new System.Windows.Forms.ComboBox();
@@ -198,7 +199,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txt_Emu_AddOptions = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tab_Xdt.SuspendLayout();
             this.tab_MAME.SuspendLayout();
@@ -810,6 +810,15 @@
             this.tab_MAME.TabIndex = 5;
             this.tab_MAME.Text = "MAME";
             this.tab_MAME.UseVisualStyleBackColor = true;
+            // 
+            // txt_Emu_AddOptions
+            // 
+            this.txt_Emu_AddOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Emu_AddOptions.Location = new System.Drawing.Point(160, 446);
+            this.txt_Emu_AddOptions.Name = "txt_Emu_AddOptions";
+            this.txt_Emu_AddOptions.Size = new System.Drawing.Size(703, 23);
+            this.txt_Emu_AddOptions.TabIndex = 119;
+            this.txt_Emu_AddOptions.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // btn_Check_Mame
             // 
@@ -2137,15 +2146,6 @@
             this.toolStripStatusLabel2.Spring = true;
             this.toolStripStatusLabel2.Text = "idle";
             this.toolStripStatusLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txt_Emu_AddOptions
-            // 
-            this.txt_Emu_AddOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Emu_AddOptions.Location = new System.Drawing.Point(160, 446);
-            this.txt_Emu_AddOptions.Name = "txt_Emu_AddOptions";
-            this.txt_Emu_AddOptions.Size = new System.Drawing.Size(703, 23);
-            this.txt_Emu_AddOptions.TabIndex = 119;
-            this.txt_Emu_AddOptions.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // Form1
             // 
