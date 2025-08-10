@@ -704,7 +704,7 @@
             this.txt_Xdt_Base.Name = "txt_Xdt_Base";
             this.txt_Xdt_Base.Size = new System.Drawing.Size(512, 26);
             this.txt_Xdt_Base.TabIndex = 4;
-            this.txt_Xdt_Base.Text = "E:\\TI99\\xdt99\\";
+            this.txt_Xdt_Base.Text = "C:\\Users\\mritt\\AppData\\Roaming\\TI99MAME\\ti99_xdt\\";
             // 
             // txt_Xdt_Assembler
             // 
@@ -720,7 +720,7 @@
             this.txt_Editor_Binary.Name = "txt_Editor_Binary";
             this.txt_Editor_Binary.Size = new System.Drawing.Size(512, 26);
             this.txt_Editor_Binary.TabIndex = 2;
-            this.txt_Editor_Binary.Text = "C:\\Program Files (x86)\\Notepad++\\notepad++.exe";
+            this.txt_Editor_Binary.Text = "C:\\Program Files\\Notepad++\\notepad++.exe";
             // 
             // txt_Editor_Options
             // 
@@ -816,13 +816,13 @@
             this.txt_Emu_AddOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Emu_AddOptions.Location = new System.Drawing.Point(160, 446);
             this.txt_Emu_AddOptions.Name = "txt_Emu_AddOptions";
-            this.txt_Emu_AddOptions.Size = new System.Drawing.Size(703, 23);
+            this.txt_Emu_AddOptions.Size = new System.Drawing.Size(960, 23);
             this.txt_Emu_AddOptions.TabIndex = 119;
             this.txt_Emu_AddOptions.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // btn_Check_Mame
             // 
-            this.btn_Check_Mame.Location = new System.Drawing.Point(799, 517);
+            this.btn_Check_Mame.Location = new System.Drawing.Point(1056, 517);
             this.btn_Check_Mame.Name = "btn_Check_Mame";
             this.btn_Check_Mame.Size = new System.Drawing.Size(64, 32);
             this.btn_Check_Mame.TabIndex = 118;
@@ -837,13 +837,14 @@
             this.cmb_Emu_Machine.Items.AddRange(new object[] {
             "-----",
             "TI99_4a",
+            "TI99_4ae",
             "TI99_4ev",
             "geneve"});
             this.cmb_Emu_Machine.Location = new System.Drawing.Point(160, 108);
             this.cmb_Emu_Machine.Name = "cmb_Emu_Machine";
-            this.cmb_Emu_Machine.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Machine.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Machine.TabIndex = 117;
-            this.cmb_Emu_Machine.Text = "TI99_4ev";
+            this.cmb_Emu_Machine.Text = "TI99_4ae";
             this.cmb_Emu_Machine.SelectedIndexChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // cmb_Emu_Cartridge
@@ -852,38 +853,38 @@
             this.cmb_Emu_Cartridge.FormattingEnabled = true;
             this.cmb_Emu_Cartridge.Items.AddRange(new object[] {
             "-----",
-            "EditAss",
+            "ExBasic",
             "MiniMem",
-            "ExBasic"});
-            this.cmb_Emu_Cartridge.Location = new System.Drawing.Point(742, 108);
+            "EditAss"});
+            this.cmb_Emu_Cartridge.Location = new System.Drawing.Point(929, 113);
             this.cmb_Emu_Cartridge.Name = "cmb_Emu_Cartridge";
-            this.cmb_Emu_Cartridge.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Cartridge.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Cartridge.TabIndex = 116;
             this.cmb_Emu_Cartridge.Text = "ExBasic";
             this.cmb_Emu_Cartridge.SelectedIndexChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_Path
             // 
-            this.txt_Emu_Path.Location = new System.Drawing.Point(480, 12);
+            this.txt_Emu_Path.Location = new System.Drawing.Point(737, 12);
             this.txt_Emu_Path.Name = "txt_Emu_Path";
-            this.txt_Emu_Path.Size = new System.Drawing.Size(383, 26);
+            this.txt_Emu_Path.Size = new System.Drawing.Size(384, 26);
             this.txt_Emu_Path.TabIndex = 115;
-            this.txt_Emu_Path.Text = "e:\\ti99\\";
+            this.txt_Emu_Path.Text = "C:\\Users\\mritt\\AppData\\Roaming\\TI99MAME\\";
             this.txt_Emu_Path.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_HardPath
             // 
-            this.txt_Emu_HardPath.Location = new System.Drawing.Point(607, 76);
+            this.txt_Emu_HardPath.Location = new System.Drawing.Point(736, 76);
             this.txt_Emu_HardPath.Name = "txt_Emu_HardPath";
-            this.txt_Emu_HardPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_HardPath.Size = new System.Drawing.Size(384, 26);
             this.txt_Emu_HardPath.TabIndex = 114;
-            this.txt_Emu_HardPath.Text = "hard\\";
+            this.txt_Emu_HardPath.Text = "ti99_chd\\";
             this.txt_Emu_HardPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(476, 79);
+            this.label52.Location = new System.Drawing.Point(605, 79);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(108, 20);
             this.label52.TabIndex = 113;
@@ -893,9 +894,9 @@
             // 
             this.txt_Emu_DiskPath.Location = new System.Drawing.Point(160, 76);
             this.txt_Emu_DiskPath.Name = "txt_Emu_DiskPath";
-            this.txt_Emu_DiskPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_DiskPath.Size = new System.Drawing.Size(384, 26);
             this.txt_Emu_DiskPath.TabIndex = 112;
-            this.txt_Emu_DiskPath.Text = "disk\\";
+            this.txt_Emu_DiskPath.Text = "ti99_dsk\\";
             this.txt_Emu_DiskPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label53
@@ -909,17 +910,17 @@
             // 
             // txt_Emu_CartPath
             // 
-            this.txt_Emu_CartPath.Location = new System.Drawing.Point(607, 44);
+            this.txt_Emu_CartPath.Location = new System.Drawing.Point(736, 44);
             this.txt_Emu_CartPath.Name = "txt_Emu_CartPath";
-            this.txt_Emu_CartPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_CartPath.Size = new System.Drawing.Size(384, 26);
             this.txt_Emu_CartPath.TabIndex = 110;
-            this.txt_Emu_CartPath.Text = "cart\\;cart2\\";
+            this.txt_Emu_CartPath.Text = "ti99_cart\\";
             this.txt_Emu_CartPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(476, 47);
+            this.label51.Location = new System.Drawing.Point(605, 47);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(105, 20);
             this.label51.TabIndex = 109;
@@ -929,9 +930,9 @@
             // 
             this.txt_Emu_RomPath.Location = new System.Drawing.Point(160, 44);
             this.txt_Emu_RomPath.Name = "txt_Emu_RomPath";
-            this.txt_Emu_RomPath.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_RomPath.Size = new System.Drawing.Size(384, 26);
             this.txt_Emu_RomPath.TabIndex = 108;
-            this.txt_Emu_RomPath.Text = "roms\\";
+            this.txt_Emu_RomPath.Text = "ti99_roms\\";
             this.txt_Emu_RomPath.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label50
@@ -953,7 +954,7 @@
             "st213",
             "st225",
             "st251"});
-            this.cmb_Emu_Hdd3.Location = new System.Drawing.Point(480, 412);
+            this.cmb_Emu_Hdd3.Location = new System.Drawing.Point(737, 414);
             this.cmb_Emu_Hdd3.Name = "cmb_Emu_Hdd3";
             this.cmb_Emu_Hdd3.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Hdd3.TabIndex = 106;
@@ -970,7 +971,7 @@
             "st213",
             "st225",
             "st251"});
-            this.cmb_Emu_Hdd2.Location = new System.Drawing.Point(480, 378);
+            this.cmb_Emu_Hdd2.Location = new System.Drawing.Point(737, 380);
             this.cmb_Emu_Hdd2.Name = "cmb_Emu_Hdd2";
             this.cmb_Emu_Hdd2.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Hdd2.TabIndex = 105;
@@ -987,7 +988,7 @@
             "525qd",
             "35dd",
             "35hd"});
-            this.cmb_Emu_Fdd4.Location = new System.Drawing.Point(480, 310);
+            this.cmb_Emu_Fdd4.Location = new System.Drawing.Point(737, 312);
             this.cmb_Emu_Fdd4.Name = "cmb_Emu_Fdd4";
             this.cmb_Emu_Fdd4.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Fdd4.TabIndex = 104;
@@ -1004,7 +1005,7 @@
             "525qd",
             "35dd",
             "35hd"});
-            this.cmb_Emu_Fdd3.Location = new System.Drawing.Point(480, 276);
+            this.cmb_Emu_Fdd3.Location = new System.Drawing.Point(737, 278);
             this.cmb_Emu_Fdd3.Name = "cmb_Emu_Fdd3";
             this.cmb_Emu_Fdd3.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Fdd3.TabIndex = 103;
@@ -1021,7 +1022,7 @@
             "525qd",
             "35dd",
             "35hd"});
-            this.cmb_Emu_Fdd2.Location = new System.Drawing.Point(480, 242);
+            this.cmb_Emu_Fdd2.Location = new System.Drawing.Point(737, 244);
             this.cmb_Emu_Fdd2.Name = "cmb_Emu_Fdd2";
             this.cmb_Emu_Fdd2.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Fdd2.TabIndex = 102;
@@ -1042,7 +1043,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1051,7 +1052,7 @@
             "memex"});
             this.cmb_Emu_Peb8.Location = new System.Drawing.Point(160, 412);
             this.cmb_Emu_Peb8.Name = "cmb_Emu_Peb8";
-            this.cmb_Emu_Peb8.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb8.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb8.TabIndex = 101;
             this.cmb_Emu_Peb8.Text = "hfdc";
             this.cmb_Emu_Peb8.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
@@ -1070,7 +1071,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1079,7 +1080,7 @@
             "memex"});
             this.cmb_Emu_Peb7.Location = new System.Drawing.Point(160, 378);
             this.cmb_Emu_Peb7.Name = "cmb_Emu_Peb7";
-            this.cmb_Emu_Peb7.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb7.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb7.TabIndex = 100;
             this.cmb_Emu_Peb7.Text = "-----";
             this.cmb_Emu_Peb7.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
@@ -1098,7 +1099,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1107,9 +1108,9 @@
             "memex"});
             this.cmb_Emu_Peb6.Location = new System.Drawing.Point(160, 344);
             this.cmb_Emu_Peb6.Name = "cmb_Emu_Peb6";
-            this.cmb_Emu_Peb6.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb6.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb6.TabIndex = 99;
-            this.cmb_Emu_Peb6.Text = "-----";
+            this.cmb_Emu_Peb6.Text = "tirs232";
             this.cmb_Emu_Peb6.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // cmb_Emu_Peb5
@@ -1126,7 +1127,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1135,7 +1136,7 @@
             "memex"});
             this.cmb_Emu_Peb5.Location = new System.Drawing.Point(160, 310);
             this.cmb_Emu_Peb5.Name = "cmb_Emu_Peb5";
-            this.cmb_Emu_Peb5.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb5.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb5.TabIndex = 98;
             this.cmb_Emu_Peb5.Text = "-----";
             this.cmb_Emu_Peb5.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
@@ -1154,7 +1155,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1163,9 +1164,9 @@
             "memex"});
             this.cmb_Emu_Peb4.Location = new System.Drawing.Point(160, 276);
             this.cmb_Emu_Peb4.Name = "cmb_Emu_Peb4";
-            this.cmb_Emu_Peb4.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb4.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb4.TabIndex = 97;
-            this.cmb_Emu_Peb4.Text = "-----";
+            this.cmb_Emu_Peb4.Text = "speechadapter";
             this.cmb_Emu_Peb4.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // cmb_Emu_Peb3
@@ -1182,7 +1183,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1191,7 +1192,7 @@
             "memex"});
             this.cmb_Emu_Peb3.Location = new System.Drawing.Point(160, 242);
             this.cmb_Emu_Peb3.Name = "cmb_Emu_Peb3";
-            this.cmb_Emu_Peb3.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb3.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb3.TabIndex = 96;
             this.cmb_Emu_Peb3.Text = "-----";
             this.cmb_Emu_Peb3.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
@@ -1209,9 +1210,9 @@
             // 
             this.txt_Emu_Binary.Location = new System.Drawing.Point(160, 12);
             this.txt_Emu_Binary.Name = "txt_Emu_Binary";
-            this.txt_Emu_Binary.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_Binary.Size = new System.Drawing.Size(571, 26);
             this.txt_Emu_Binary.TabIndex = 94;
-            this.txt_Emu_Binary.Text = "e:\\ti99\\mame64.exe";
+            this.txt_Emu_Binary.Text = "C:\\Users\\mritt\\AppData\\Roaming\\TI99MAME\\mame.exe";
             this.txt_Emu_Binary.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_Options
@@ -1221,7 +1222,7 @@
             this.txt_Emu_Options.Multiline = true;
             this.txt_Emu_Options.Name = "txt_Emu_Options";
             this.txt_Emu_Options.ReadOnly = true;
-            this.txt_Emu_Options.Size = new System.Drawing.Size(703, 74);
+            this.txt_Emu_Options.Size = new System.Drawing.Size(960, 74);
             this.txt_Emu_Options.TabIndex = 93;
             this.txt_Emu_Options.Text = "-----";
             // 
@@ -1237,7 +1238,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(476, 177);
+            this.label47.Location = new System.Drawing.Point(675, 182);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(58, 20);
             this.label47.TabIndex = 90;
@@ -1245,24 +1246,24 @@
             // 
             // txt_Emu_CS2
             // 
-            this.txt_Emu_CS2.Location = new System.Drawing.Point(607, 174);
+            this.txt_Emu_CS2.Location = new System.Drawing.Point(739, 179);
             this.txt_Emu_CS2.Name = "txt_Emu_CS2";
-            this.txt_Emu_CS2.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_CS2.Size = new System.Drawing.Size(381, 26);
             this.txt_Emu_CS2.TabIndex = 89;
             this.txt_Emu_CS2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_CS1
             // 
-            this.txt_Emu_CS1.Location = new System.Drawing.Point(607, 142);
+            this.txt_Emu_CS1.Location = new System.Drawing.Point(739, 147);
             this.txt_Emu_CS1.Name = "txt_Emu_CS1";
-            this.txt_Emu_CS1.Size = new System.Drawing.Size(256, 26);
+            this.txt_Emu_CS1.Size = new System.Drawing.Size(381, 26);
             this.txt_Emu_CS1.TabIndex = 88;
             this.txt_Emu_CS1.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(476, 145);
+            this.label45.Location = new System.Drawing.Point(675, 150);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(58, 20);
             this.label45.TabIndex = 87;
@@ -1286,14 +1287,14 @@
             "twinjoy"});
             this.cmb_Emu_JoyPort.Location = new System.Drawing.Point(160, 142);
             this.cmb_Emu_JoyPort.Name = "cmb_Emu_JoyPort";
-            this.cmb_Emu_JoyPort.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_JoyPort.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_JoyPort.TabIndex = 83;
             this.cmb_Emu_JoyPort.Text = "-----";
             this.cmb_Emu_JoyPort.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // txt_Emu_WDS3
             // 
-            this.txt_Emu_WDS3.Location = new System.Drawing.Point(607, 412);
+            this.txt_Emu_WDS3.Location = new System.Drawing.Point(864, 414);
             this.txt_Emu_WDS3.Name = "txt_Emu_WDS3";
             this.txt_Emu_WDS3.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_WDS3.TabIndex = 82;
@@ -1301,7 +1302,7 @@
             // 
             // txt_Emu_WDS2
             // 
-            this.txt_Emu_WDS2.Location = new System.Drawing.Point(607, 378);
+            this.txt_Emu_WDS2.Location = new System.Drawing.Point(864, 380);
             this.txt_Emu_WDS2.Name = "txt_Emu_WDS2";
             this.txt_Emu_WDS2.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_WDS2.TabIndex = 81;
@@ -1309,7 +1310,7 @@
             // 
             // txt_Emu_WDS1
             // 
-            this.txt_Emu_WDS1.Location = new System.Drawing.Point(607, 344);
+            this.txt_Emu_WDS1.Location = new System.Drawing.Point(864, 346);
             this.txt_Emu_WDS1.Name = "txt_Emu_WDS1";
             this.txt_Emu_WDS1.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_WDS1.TabIndex = 80;
@@ -1318,7 +1319,7 @@
             // 
             // txt_Emu_DSK4
             // 
-            this.txt_Emu_DSK4.Location = new System.Drawing.Point(607, 310);
+            this.txt_Emu_DSK4.Location = new System.Drawing.Point(864, 312);
             this.txt_Emu_DSK4.Name = "txt_Emu_DSK4";
             this.txt_Emu_DSK4.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_DSK4.TabIndex = 79;
@@ -1326,7 +1327,7 @@
             // 
             // txt_Emu_DSK3
             // 
-            this.txt_Emu_DSK3.Location = new System.Drawing.Point(607, 276);
+            this.txt_Emu_DSK3.Location = new System.Drawing.Point(864, 278);
             this.txt_Emu_DSK3.Name = "txt_Emu_DSK3";
             this.txt_Emu_DSK3.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_DSK3.TabIndex = 78;
@@ -1334,7 +1335,7 @@
             // 
             // txt_Emu_DSK2
             // 
-            this.txt_Emu_DSK2.Location = new System.Drawing.Point(607, 242);
+            this.txt_Emu_DSK2.Location = new System.Drawing.Point(864, 244);
             this.txt_Emu_DSK2.Name = "txt_Emu_DSK2";
             this.txt_Emu_DSK2.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_DSK2.TabIndex = 77;
@@ -1343,7 +1344,7 @@
             // 
             // txt_Emu_DSK1
             // 
-            this.txt_Emu_DSK1.Location = new System.Drawing.Point(607, 208);
+            this.txt_Emu_DSK1.Location = new System.Drawing.Point(864, 210);
             this.txt_Emu_DSK1.Name = "txt_Emu_DSK1";
             this.txt_Emu_DSK1.Size = new System.Drawing.Size(256, 26);
             this.txt_Emu_DSK1.TabIndex = 76;
@@ -1353,7 +1354,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(352, 415);
+            this.label44.Location = new System.Drawing.Point(675, 417);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(58, 20);
             this.label44.TabIndex = 74;
@@ -1362,7 +1363,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(352, 381);
+            this.label43.Location = new System.Drawing.Point(675, 383);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(58, 20);
             this.label43.TabIndex = 72;
@@ -1378,7 +1379,7 @@
             "st213",
             "st225",
             "st251"});
-            this.cmb_Emu_Hdd1.Location = new System.Drawing.Point(480, 344);
+            this.cmb_Emu_Hdd1.Location = new System.Drawing.Point(737, 346);
             this.cmb_Emu_Hdd1.Name = "cmb_Emu_Hdd1";
             this.cmb_Emu_Hdd1.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Hdd1.TabIndex = 71;
@@ -1388,7 +1389,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(352, 347);
+            this.label42.Location = new System.Drawing.Point(675, 349);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(58, 20);
             this.label42.TabIndex = 70;
@@ -1397,7 +1398,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(352, 313);
+            this.label41.Location = new System.Drawing.Point(675, 315);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(56, 20);
             this.label41.TabIndex = 68;
@@ -1406,7 +1407,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(352, 279);
+            this.label40.Location = new System.Drawing.Point(675, 281);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(56, 20);
             this.label40.TabIndex = 66;
@@ -1415,7 +1416,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(352, 245);
+            this.label39.Location = new System.Drawing.Point(675, 247);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(56, 20);
             this.label39.TabIndex = 64;
@@ -1431,7 +1432,7 @@
             "525qd",
             "35dd",
             "35hd"});
-            this.cmb_Emu_Fdd1.Location = new System.Drawing.Point(480, 208);
+            this.cmb_Emu_Fdd1.Location = new System.Drawing.Point(737, 210);
             this.cmb_Emu_Fdd1.Name = "cmb_Emu_Fdd1";
             this.cmb_Emu_Fdd1.Size = new System.Drawing.Size(121, 28);
             this.cmb_Emu_Fdd1.TabIndex = 63;
@@ -1441,7 +1442,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(352, 211);
+            this.label29.Location = new System.Drawing.Point(675, 213);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(56, 20);
             this.label29.TabIndex = 62;
@@ -1515,7 +1516,7 @@
             "myarcmem",
             "pcode",
             "samsmem",
-            "speech",
+            "speechadapter",
             "tifdc",
             "tirs232",
             "usbsm",
@@ -1524,9 +1525,9 @@
             "memex"});
             this.cmb_Emu_Peb2.Location = new System.Drawing.Point(160, 208);
             this.cmb_Emu_Peb2.Name = "cmb_Emu_Peb2";
-            this.cmb_Emu_Peb2.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_Peb2.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_Peb2.TabIndex = 49;
-            this.cmb_Emu_Peb2.Text = "evpc";
+            this.cmb_Emu_Peb2.Text = "-----";
             this.cmb_Emu_Peb2.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label32
@@ -1547,7 +1548,7 @@
             "peb"});
             this.cmb_Emu_IoPort.Location = new System.Drawing.Point(160, 174);
             this.cmb_Emu_IoPort.Name = "cmb_Emu_IoPort";
-            this.cmb_Emu_IoPort.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_IoPort.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_IoPort.TabIndex = 47;
             this.cmb_Emu_IoPort.Text = "peb";
             this.cmb_Emu_IoPort.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
@@ -1570,16 +1571,16 @@
             "single",
             "multi",
             "gkracker"});
-            this.cmb_Emu_GromPort.Location = new System.Drawing.Point(607, 108);
+            this.cmb_Emu_GromPort.Location = new System.Drawing.Point(731, 113);
             this.cmb_Emu_GromPort.Name = "cmb_Emu_GromPort";
-            this.cmb_Emu_GromPort.Size = new System.Drawing.Size(121, 28);
+            this.cmb_Emu_GromPort.Size = new System.Drawing.Size(192, 28);
             this.cmb_Emu_GromPort.TabIndex = 45;
             this.cmb_Emu_GromPort.TextChanged += new System.EventHandler(this.txt_Emu_TextChanged);
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(476, 111);
+            this.label30.Location = new System.Drawing.Point(643, 116);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(82, 20);
             this.label30.TabIndex = 44;
@@ -2053,6 +2054,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -2075,7 +2077,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -2089,7 +2091,7 @@
             this.extrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
             this.extrasToolStripMenuItem.Name = "extrasToolStripMenuItem";
-            this.extrasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.extrasToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.extrasToolStripMenuItem.Text = "Extras";
             // 
             // optionsToolStripMenuItem
@@ -2114,6 +2116,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1,
@@ -2128,7 +2131,7 @@
             // 
             this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(128, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(128, 19);
             this.toolStripStatusLabel1.Text = "---";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripStatusLabel1.Visible = false;
@@ -2136,7 +2139,7 @@
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(256, 16);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(256, 18);
             this.toolStripProgressBar1.Visible = false;
             // 
             // toolStripStatusLabel2
